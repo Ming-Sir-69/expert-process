@@ -8,7 +8,7 @@ Expert Process的工作流、卡片结构和检查工具参考了以下项目。
 | [Skill Seekers](https://github.com/yusufkaraaslan/Skill_Seekers) | `5b5d8dfca263fa76e6daae9f292890b311ef36aa` | 异构来源、多源冲突与分阶段合并；`integrate.md`冲突处理参考并改写自`complex-merge.yaml`七阶段结构 | MIT |
 | [OpenAI skill-creator](https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.system/skill-creator) | `49f948faa9258a0c61caceaf225e179651397431` | 触发边界、模型自由度、渐进披露、标准技能结构与结构检查规则；指南经重新表述，CLI检查以Python标准库重实现 | 该历史Skill的独立LICENSE.txt为Apache-2.0 |
 
-上游归属和相关MIT许可全文保存在[NOTICE](NOTICE)，本项目许可见[LICENSE](LICENSE)。固定版本的原路径与哈希见[来源元数据](upstream/SOURCES.json)，该清单不表示复制了全部列出文件。
+上游归属和相关MIT许可全文保存在[NOTICE](NOTICE)，本项目许可见[LICENSE](LICENSE)。固定版本的原路径与哈希见[来源元数据](https://github.com/Ming-Sir-69/expert-process/blob/main/upstream/SOURCES.json)，该清单不表示复制了全部列出文件。
 
 ## 其他方法与算法来源
 

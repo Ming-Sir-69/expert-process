@@ -2,7 +2,8 @@
 """eca — Expert Process 工具包的本机命令（只用 Python 标准库，兼容 3.9）。
 
 确定性操作在这里完成，只把简短结果回传给模型：
-  new     建档案 runs/<日期>_<slug>/（1_简报 2_作战图 3_日志 4_验收复盘）
+  guide   只读展示共同核心与轻量/全量用法，不建档
+  new     在外部数据目录建轻量任务记录或全量四文档档案
   status  看档案进度；不带参数看最近改过的档案
   gate    往日志追加一条关卡记录
   card    在档案里按模板建流程卡 / 专家卡 / 偏好卡
@@ -13,7 +14,7 @@
   stats   汇总所有档案的关卡与"改变方向"次数
   pack    导出 dist/：技能 zip + 单文件版
 
-v0.3（2026-10-21）：档案从 7 个文件改为 4 个活文档；新增偏好卡、gate、stats。
+v0.4：默认轻量，按需使用全量；运行数据与导出保存到代码目录之外。
 v0.2 结构的旧档案（00_定位 … 06_复盘）仍可 status / check / stats。
 """
 from __future__ import annotations
@@ -21,6 +22,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
 import re
 import shutil
 import sys
@@ -30,13 +32,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / "skill" / "expert-process"
 TEMPLATES = ROOT / "templates"
-LIBRARY = ROOT / "library"
-RUNS = ROOT / "runs"
-DIST = ROOT / "dist"
+DATA_ROOT = LIBRARY = RUNS = DIST = None
 
 TODO = "（待填）"
 STAGES = ["1_简报.md", "2_作战图.md", "3_日志.md", "4_验收复盘.md"]
 BRIEF, PLAN, LOG, REVIEW = STAGES
+LITE_DOC = "任务.md"
+RUN_META = ".eca.json"
 LEGACY_STAGES = ["00_定位.md", "01_流程.md", "02_专家.md", "03_整合.md", "04_执行.md", "05_验收.md", "06_复盘.md"]
 CARD_TYPES = {"process": "processes", "expert": "experts", "preference": "preferences"}
 CARD_NAMES = {"process": "流程卡", "expert": "专家卡", "preference": "偏好卡"}
@@ -53,6 +55,50 @@ GATE_ID_RE = re.compile(r"^G\d+$")
 SKILL_KEYS = {"name", "description", "license", "allowed-tools", "metadata"}
 STALE_DAYS = 180       # 行业卡
 PREF_STALE_DAYS = 90   # 偏好条目
+MODULE_REFERENCES = {"cards.md", "forge.md", "gates.md", "integrate.md", "research.md", "retro.md", "review.md", "workflow.md"}
+
+
+def default_data_dir() -> Path:
+    """只计算平台用户数据路径，不创建目录。"""
+    if os.name == "nt":
+        return Path(os.environ.get("LOCALAPPDATA", str(Path.home() / "AppData/Local"))) / "expert-process"
+    if sys.platform == "darwin":
+        return Path.home() / "Library/Application Support/expert-process"
+    return Path(os.environ.get("XDG_DATA_HOME", str(Path.home() / ".local/share"))) / "expert-process"
+
+
+def external_path(path) -> Path:
+    """运行写入解析符号链接后仍必须位于代码目录之外。"""
+    resolved = Path(path).expanduser().resolve()
+    if resolved == ROOT or ROOT in resolved.parents:
+        raise ValueError(f"运行数据和输出必须位于代码仓库之外：{resolved}")
+    return resolved
+
+
+def configure_storage(path=None) -> Path:
+    global DATA_ROOT, LIBRARY, RUNS, DIST
+    selected = path if path is not None else os.environ.get("ECA_DATA_DIR")
+    if selected is None:
+        config = Path(os.environ.get("ECA_CONFIG_FILE", str(Path(os.environ.get("XDG_CONFIG_HOME", str(Path.home() / ".config"))) / "expert-process/config.json"))).expanduser()
+        if config.exists():
+            try:
+                settings = json.loads(config.read_text(encoding="utf-8"))
+            except (OSError, ValueError) as error:
+                raise ValueError(f"无法读取数据配置：{config}：{error}") from error
+            if not isinstance(settings, dict):
+                raise ValueError(f"数据配置必须是JSON对象：{config}")
+            selected = settings.get("data_dir")
+            if selected is not None:
+                if not isinstance(selected, str) or not selected.strip():
+                    raise ValueError(f"data_dir必须为非空路径：{config}")
+                selected = Path(selected).expanduser()
+                if not selected.is_absolute():
+                    selected = config.resolve().parent / selected
+    if selected is not None and not str(selected).strip():
+        raise ValueError("数据根不能为空")
+    DATA_ROOT = external_path(default_data_dir() if selected is None else selected)
+    LIBRARY, RUNS, DIST = (DATA_ROOT / name for name in ("library", "runs", "dist"))
+    return DATA_ROOT
 
 
 # ---------- 小工具 ----------
@@ -62,10 +108,13 @@ def today() -> str:
 
 
 def rel(p: Path) -> str:
-    try:
-        return str(p.resolve().relative_to(ROOT))
-    except ValueError:
-        return str(p)
+    for base in (DATA_ROOT, ROOT):
+        if base is not None:
+            try:
+                return str(p.resolve().relative_to(base))
+            except ValueError:
+                pass
+    return str(p)
 
 
 def read(p: Path) -> str:
@@ -158,9 +207,10 @@ def all_runs() -> list:
 
 def resolve_run(arg) -> Path:
     if arg:
-        p = Path(arg)
+        p = Path(arg).expanduser()
         if not p.is_absolute():
-            p = RUNS / arg if (RUNS / arg).exists() else (Path.cwd() / arg)
+            candidates = [RUNS / p, DATA_ROOT / p, Path.cwd() / p]
+            p = next((candidate for candidate in candidates if candidate.is_dir()), candidates[-1])
         if not p.is_dir():
             sys.exit(f"找不到档案：{arg}")
         return p.resolve()
@@ -172,6 +222,23 @@ def resolve_run(arg) -> Path:
 
 def is_legacy(run: Path) -> bool:
     return (run / LEGACY_STAGES[0]).exists() and not (run / BRIEF).exists()
+
+
+def run_mode(run: Path) -> str:
+    meta = run / RUN_META
+    if meta.exists():
+        try:
+            data = json.loads(read(meta))
+        except ValueError as error:
+            raise ValueError(f"档案元数据损坏：{rel(meta)}") from error
+        if not isinstance(data, dict) or data.get("schema_version") != 1 or data.get("mode") not in {"lite", "full"}:
+            raise ValueError(f"无效档案元数据（schema_version/mode）：{rel(meta)}")
+        return data["mode"]
+    return "legacy" if is_legacy(run) else "full"
+
+
+def task_log(run: Path) -> Path:
+    return run / (LITE_DOC if run_mode(run) == "lite" else LOG)
 
 
 def card_files(folder: Path):
@@ -215,9 +282,10 @@ def legacy_gates(run: Path) -> list:
     out = []
     for m in re.finditer(r"^##\s+(G\d+)\s*(.*?)$(.*?)(?=^##\s|\Z)", text, flags=re.M | re.S):
         ch = re.search(r"^-\s*改变方向：(.*)$", m.group(3), flags=re.M)
-        answer = bool(re.search(r"^-\s*答(?:（[^）]*）)?[：:]", m.group(3), flags=re.M))
+        answer = re.search(r"^-[ \t]*答(?:（[^）\n]*）)?[：:][ \t]*(.*)$", m.group(3), flags=re.M)
+        state = "已答" if answer and filled(answer.group(1)) else "待答" if answer else "未知"
         out.append({"id": m.group(1), "title": m.group(2).strip(), "type": "",
-                    "status": "已答" if answer else "未知", "basis": "回顾" if re.search(r"复盘|补记", m.group(3)) else "未知",
+                    "status": state, "basis": "回顾" if re.search(r"复盘|补记", m.group(3)) else "未知",
                     "fields": {"改变方向": ch.group(1).strip() if ch else ""}})
     return out
 
@@ -289,7 +357,7 @@ def check_card(path: Path):
             if d is None:
                 warns.append(f"{rel(path)}: 偏好「{item}」日期要写成 YYYY-MM-DD")
             elif state == "有效" and d > PREF_STALE_DAYS:
-                warns.append(f"{rel(path)}: 偏好「{item}」已 {d} 天未确认，建议放进第一个关卡")
+                warns.append(f"{rel(path)}: 偏好「{item}」已 {d} 天未确认，复用前核对适用性")
     return errors, warns
 
 
@@ -337,7 +405,7 @@ def check_skill(folder: Path):
     for ref in sorted((folder / "references").glob("*.md")) if (folder / "references").exists() else []:
         if ref.name not in text:
             warns.append(f"{rel(ref)}: SKILL.md 没有提到它，模型可能不知道何时读")
-        if (folder / "references" / "workflow.md").exists():
+        if (folder / "references" / "workflow.md").exists() and ref.name in MODULE_REFERENCES:
             interface = {cells[0]: cells[1] for cells in table_rows(section(read(ref), "模块接口")) if len(cells) >= 2}
             missing = [field for field in MODULE_FIELDS if not filled(interface.get(field, ""))]
             if missing:
@@ -345,12 +413,38 @@ def check_skill(folder: Path):
     return errors, warns
 
 
+def gate_warnings(run: Path, log: str):
+    warns = []
+    for gate in parse_gates(log):
+        empty = [field for field in GATE_FIELDS if not gate["fields"].get(field) or TODO in gate["fields"][field]]
+        if empty:
+            warns.append(f"{rel(run)}: 关卡 {gate['id']} 缺 {'、'.join(empty)}")
+        if gate["status"] != "已答":
+            warns.append(f"{rel(run)}: 关卡 {gate['id']} 待用户答复，等待时长不构成答案或许可")
+    return warns
+
+
 def check_run(run: Path):
     errors, warns = [], []
-    if is_legacy(run):
+    try:
+        mode = run_mode(run)
+    except ValueError as error:
+        return [str(error)], []
+    if mode == "lite":
+        document = run / LITE_DOC
+        if not document.is_file():
+            errors.append(f"{rel(run)}: 缺少 {LITE_DOC}")
+        else:
+            if TODO in read(document):
+                warns.append(f"{rel(document)}: 仍有（待填），任务内容尚未填写")
+            warns += gate_warnings(run, read(document))
+    elif mode == "legacy":
         for s in LEGACY_STAGES:
             if not (run / s).exists():
                 errors.append(f"{rel(run)}: 缺少 {s}")
+        for gate in legacy_gates(run):
+            if gate["status"] == "待答":
+                warns.append(f"{rel(run)}: 旧关卡 {gate['id']} 待用户答复，空答或占位不构成答案")
     else:
         for s in STAGES:
             if not (run / s).exists():
@@ -373,12 +467,7 @@ def check_run(run: Path):
             elif d["类型"] in {"问", "确认"}:
                 if not decision_answered(d, gates_by_id) and not assumption_authorized(d, read(run / BRIEF)):
                     warns.append(f"{rel(run)}: 决策 {d['id']}「{d['决定']}」是\"{d['类型']}\"类，还没有用户答案或有效授权")
-        for g in gates:
-            empty = [f for f in GATE_FIELDS if not g["fields"].get(f) or TODO in g["fields"][f]]
-            if empty:
-                warns.append(f"{rel(run)}: 关卡 {g['id']} 缺 {'、'.join(empty)}")
-            if g["status"] != "已答":
-                warns.append(f"{rel(run)}: 关卡 {g['id']} 待用户答复，等待时长不构成答案或许可")
+        warns += gate_warnings(run, log)
         phase_section = section(read(run / PLAN), "阶段交接")
         phases = table_records(phase_section)
         if not phases:
@@ -408,21 +497,35 @@ def check_run(run: Path):
 
 # ---------- 命令 ----------
 
+def cmd_guide(a):
+    names = ["core.md", "lite.md" if a.mode == "lite" else "workflow.md"]
+    for name in names:
+        path = SKILL_DIR / "references" / name
+        if not path.is_file():
+            raise ValueError(f"缺少使用指南：{path}")
+    print("\n\n".join(read(SKILL_DIR / "references" / name).strip() for name in names))
+
+
 def cmd_new(a):
     slug = re.sub(r"[\s/\\]+", "-", a.slug.strip()).strip("-")
     if not slug:
         sys.exit("slug 不能为空")
-    run = RUNS / f"{today()}_{slug}"
+    run = external_path(RUNS / f"{today()}_{slug}")
     if run.exists():
         sys.exit(f"已存在：{rel(run)}")
     title = a.title or slug
-    shutil.copytree(TEMPLATES / "dossier", run)
+    mode = getattr(a, "mode", "lite")
+    if mode not in {"lite", "full"}:
+        raise ValueError("模式只能是 lite 或 full")
+    shutil.copytree(TEMPLATES / ("lite" if mode == "lite" else "dossier"), run)
     for p in run.glob("*.md"):
         p.write_text(read(p).replace("{title}", title).replace("{date}", today()), encoding="utf-8")
     for keep in run.rglob(".keep"):
         keep.unlink()
-    print(f"已建档案：{rel(run)}")
-    print("下一步：find 查库（含偏好卡），填 1_简报.md")
+    (run / RUN_META).write_text(json.dumps({"schema_version": 1, "mode": mode}, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"已建{'轻量记录' if mode == 'lite' else '全量档案'}：{rel(run)}")
+    print(f"位置：{run}")
+    print(f"按实际需要维护{LITE_DOC if mode == 'lite' else '四份活文档'}；不为填表增加工作。")
 
 
 def stage_state(p: Path) -> str:
@@ -434,18 +537,20 @@ def stage_state(p: Path) -> str:
 
 def cmd_status(a):
     run = resolve_run(a.run)
-    legacy = is_legacy(run)
-    print(f"档案：{rel(run)}" + ("（v0.2 旧结构）" if legacy else ""))
-    if legacy:
+    mode = run_mode(run)
+    print(f"档案：{rel(run)}" + ("（v0.2 旧结构）" if mode == "legacy" else "（轻量）" if mode == "lite" else "（全量）"))
+    if mode == "legacy":
         for s in LEGACY_STAGES:
             print(f"  {s:<10} {stage_state(run / s)}")
-        print(f"  关卡       {len(legacy_gates(run))} 个（关卡记录.md）")
+        gates = legacy_gates(run)
+        print(f"  关卡       {len(gates)} 个（关卡记录.md）")
+        print(f"  待答关卡   {sum(gate['status'] == '待答' for gate in gates)} 个")
     else:
-        for s in (BRIEF, PLAN):
+        for s in ([LITE_DOC] if mode == "lite" else [BRIEF, PLAN]):
             print(f"  {s:<10} {stage_state(run / s)}")
-        log = read(run / LOG)
+        log = read(task_log(run))
         gates = parse_gates(log)
-        print(f"  {LOG:<10} {log_entries(log)} 条记录，其中关卡 {len(gates)} 个")
+        print(f"  执行记录   {log_entries(log)} 条记录，其中关卡 {len(gates)} 个")
         pending_gates = [gate for gate in gates if gate["status"] != "已答"]
         print(f"  待答关卡   {len(pending_gates)} 个")
         if pending_gates:
@@ -456,8 +561,9 @@ def cmd_status(a):
                 wait = gate["fields"].get("等待秒数", "不限")
                 note = "无额外超时" if wait == "不限" else f"{wait}秒提醒，到期仍待答"
                 print(f"    {gate['id']}：{note}")
-        print(f"  {REVIEW:<10} {stage_state(run / REVIEW)}")
-        ds = [d for d in parse_decisions(read(run / PLAN)) if d["决定"] and TODO not in d["决定"]]
+        if mode == "full":
+            print(f"  {REVIEW:<10} {stage_state(run / REVIEW)}")
+        ds = [d for d in parse_decisions(read(run / PLAN)) if d["决定"] and TODO not in d["决定"]] if mode == "full" else []
         if ds:
             ask = [d for d in ds if d["类型"] == "问"]
             gates_by_id = {gate["id"]: gate for gate in gates}
@@ -474,15 +580,15 @@ def cmd_status(a):
 
 def cmd_gate(a):
     run = resolve_run(a.run)
-    if is_legacy(run):
+    if run_mode(run) == "legacy":
         sys.exit("v0.2 旧结构的档案不支持 gate，请手动写进 关卡记录.md")
     if not GATE_ID_RE.match(a.id):
         sys.exit("关卡编号写成 G1、G2 …")
-    log_path = run / LOG
+    log_path = external_path(task_log(run))
     log = read(log_path)
     previous = next((gate for gate in parse_gates(log) if gate["id"] == a.id), None)
     if previous and not a.resolve:
-        sys.exit(f"{a.id} 已经记过了；要改就直接编辑 {LOG}")
+        sys.exit(f"{a.id} 已经记过了；要改就直接编辑 {log_path.name}")
     if a.resolve and not previous:
         sys.exit(f"{a.id} 尚未登记，不能凭空追加答复")
     if a.resolve and (previous["status"] == "已答" or not filled(a.answer)):
@@ -517,7 +623,7 @@ def cmd_gate(a):
     log_path.write_text(log.rstrip("\n") + "\n" + "\n".join(lines) + "\n", encoding="utf-8")
     print(f"已记关卡 {a.id} → {rel(log_path)}")
     if filled(a.answer) and not a.writeback:
-        print("提醒：回写为空。把答案写进 1_简报 / 2_作战图 / 偏好卡后补上")
+        print("提醒：回写为空。把答案更新到任务记录或相应约束后补上")
 
 
 def cmd_card(a):
@@ -526,7 +632,7 @@ def cmd_card(a):
         sys.exit("类型只能是 process、expert 或 preference")
     if not ID_RE.match(a.id):
         sys.exit("id 只能用小写字母、数字、连字符")
-    dest = run / "cards" / f"{a.id}.md"
+    dest = external_path(run / "cards" / f"{a.id}.md")
     if dest.exists():
         sys.exit(f"已存在：{rel(dest)}")
     dest.parent.mkdir(exist_ok=True)
@@ -568,6 +674,7 @@ def cmd_find(a):
 
 
 def build_index():
+    external_path(LIBRARY / "INDEX.md")
     rows = {k: [] for k in CARD_TYPES}
     for c in library_cards():
         data, _, _ = split_frontmatter(read(c))
@@ -583,7 +690,7 @@ def build_index():
             out.append(f"| [{d.get('id')}]({rel(c).replace('library/', '', 1)}) | {d.get('title','')} | {d.get('domain','')} | "
                        f"{tags} | {d.get('updated','')} | {d.get('confidence','')} | {used} |")
         out.append("")
-    LIBRARY.mkdir(exist_ok=True)
+    LIBRARY.mkdir(parents=True, exist_ok=True)
     (LIBRARY / "INDEX.md").write_text("\n".join(out), encoding="utf-8")
     return sum(len(v) for v in rows.values())
 
@@ -594,6 +701,7 @@ def cmd_index(a):
 
 def cmd_save(a):
     run = resolve_run(a.run)
+    external_path(run)
     cards = card_files(run / "cards") if (run / "cards").exists() else []
     if not cards:
         sys.exit("这个档案的 cards/ 里没有卡片")
@@ -613,6 +721,7 @@ def cmd_save(a):
     for c in cards:
         data, _, body = split_frontmatter(read(c))
         dest = LIBRARY / CARD_TYPES[data["type"]] / f"{data['id']}.md"
+        external_path(dest)
         used = [run.name]
         if dest.exists():
             old, _, _ = split_frontmatter(read(dest))
@@ -628,6 +737,7 @@ def cmd_save(a):
             while hist.exists():
                 hist = LIBRARY / "_history" / f"{base}_{suffix}.md"
                 suffix += 1
+            external_path(hist)
             hist.parent.mkdir(exist_ok=True)
             shutil.move(str(dest), hist)
             print(f"  旧版移到 {rel(hist)}")
@@ -643,7 +753,7 @@ def cmd_check(a):
     if a.path:
         p = Path(a.path)
         if not p.is_absolute():
-            p = (ROOT / a.path) if (ROOT / a.path).exists() else (RUNS / a.path)
+            p = (ROOT / a.path) if (ROOT / a.path).exists() else (DATA_ROOT / a.path) if (DATA_ROOT / a.path).exists() else (RUNS / a.path)
         if not p.exists():
             sys.exit(f"找不到：{a.path}")
         targets.append(p.resolve())
@@ -675,8 +785,9 @@ def cmd_stats(a):
     by_basis = {key: {"关卡": 0, "待答": 0, "是": 0, "否": 0, "未记": 0} for key in ["事前", "回顾", "未知"]}
     runs = []
     for run in all_runs():
-        legacy = is_legacy(run)
-        gates = legacy_gates(run) if legacy else parse_gates(read(run / LOG))
+        mode = run_mode(run)
+        legacy = mode == "legacy"
+        gates = legacy_gates(run) if legacy else parse_gates(read(task_log(run)))
         c = {"是": 0, "否": 0, "未记": 0}
         for g in gates:
             v = g["fields"].get("改变方向", "")
@@ -693,7 +804,8 @@ def cmd_stats(a):
         tot["关卡"] += len(gates)
         for k in c:
             tot[k] += c[k]
-        runs.append({"档案": run.name, "结构": "v0.2" if legacy else "v0.3", "关卡": len(gates), **c})
+        structure = "v0.2" if legacy else "v0.4-lite" if mode == "lite" else "v0.4-full" if (run / RUN_META).exists() else "v0.3"
+        runs.append({"档案": run.name, "结构": structure, "关卡": len(gates), **c})
     if a.json:
         print(json.dumps({"合计": tot, "按登记方式": by_basis, "按类型": by_type, "档案": runs,
                           "范围": "改变方向是复盘标注；事前登记、回顾和未知分开，不证明专业质量或因果收益。"}, ensure_ascii=False, indent=2))
@@ -719,8 +831,10 @@ def cmd_pack(a):
     missing = [path.name for path in legal_files if not path.is_file()]
     if missing:
         sys.exit("缺少许可与归属文件，请使用完整工具包：" + "、".join(missing))
-    DIST.mkdir(exist_ok=True)
-    zpath = DIST / "expert-process.zip"
+    destination = external_path(getattr(a, "output_dir", None) or DIST)
+    zpath = external_path(destination / "expert-process.zip")
+    single = external_path(destination / "expert-process_单文件.md")
+    destination.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
         for f in sorted(SKILL_DIR.rglob("*")):
             if f.is_file() and not f.name.startswith("."):
@@ -728,20 +842,31 @@ def cmd_pack(a):
         for path in legal_files:
             z.write(path, Path("expert-process") / path.name)
     _, _, body = split_frontmatter(read(SKILL_DIR / "SKILL.md"))
-    body = re.sub(r"\]\(references/([^)]+)\.md\)", r"]（见下文附录：\1）", body)
+    references = sorted((SKILL_DIR / "references").glob("*.md"))
+    anchors = {path.resolve(): f"eca-ref-{path.stem}" for path in references}
+    anchors.update({path.resolve(): f"eca-{path.stem.lower()}" for path in legal_files})
+
+    def inline_links(text, origin):
+        def replace(match):
+            target = match.group(1)
+            if target.startswith(("https://", "http://", "mailto:", "#")):
+                return match.group(0)
+            destination = (origin.parent / target.split("#", 1)[0]).resolve()
+            anchor = anchors.get(destination)
+            return f"](#{anchor})" if anchor else match.group(0)
+        return re.sub(r"\]\(([^)\s]+)\)", replace, text)
     parts = [
         "# Expert Process（单文件版）",
         "",
-        "> 用在没有命令执行能力的环境（ChatGPT Library、Claude 项目文档）。方法与完整版相同；"
-        "四个档案文件（简报、作战图、日志、验收复盘）改为写在对话或项目文档里，eca 命令相关步骤跳过。",
+        "> 通用方法资料汇编：默认轻量，按需要取用全量方法。无命令能力时跳过CLI步骤；"
+        "记录沿用当前宿主可访问的位置，不要求创建四份替代档案。各手机平台的专用适配不包含在本版中。",
         "",
-        body.strip(),
+        inline_links(body, SKILL_DIR / "SKILL.md").strip(),
     ]
-    for ref in sorted((SKILL_DIR / "references").glob("*.md")):
-        parts += ["", "---", "", f"## 附录：{ref.stem}", "", read(ref).strip()]
+    for ref in references:
+        parts += ["", "---", "", f'<a id="{anchors[ref.resolve()]}"></a>', "", f"## 附录：{ref.stem}", "", inline_links(read(ref), ref).strip()]
     for path in legal_files:
-        parts += ["", "---", "", f"## 附录：{path.name}", "", read(path).strip()]
-    single = DIST / "expert-process_单文件.md"
+        parts += ["", "---", "", f'<a id="{anchors[path.resolve()]}"></a>', "", f"## 附录：{path.name}", "", inline_links(read(path), path).strip()]
     single.write_text("\n".join(parts) + "\n", encoding="utf-8")
     print(f"已导出：{rel(zpath)}（{zpath.stat().st_size} 字节）")
     print(f"已导出：{rel(single)}（{single.stat().st_size} 字节）")
@@ -749,10 +874,16 @@ def cmd_pack(a):
 
 def main(argv=None):
     p = argparse.ArgumentParser(prog="eca", description="Expert Process 工具包本机命令")
+    p.add_argument("--data-dir", help="外部运行数据根；禁止使用代码仓库内路径")
+    p.add_argument("--version", action="version", version="eca 0.4")
     sub = p.add_subparsers(dest="cmd", required=True)
+    s = sub.add_parser("guide", help="只读显示轻量或全量用法，不创建任务记录")
+    s.add_argument("mode", nargs="?", choices=["lite", "full"], default="lite")
+    s.set_defaults(fn=cmd_guide)
     s = sub.add_parser("new", help="建档案")
     s.add_argument("slug")
     s.add_argument("--title")
+    s.add_argument("--mode", choices=["lite", "full"], default="lite", help="默认轻量单文档；full为四份活文档")
     s.set_defaults(fn=cmd_new)
     s = sub.add_parser("status", help="看档案进度")
     s.add_argument("run", nargs="?")
@@ -794,9 +925,14 @@ def main(argv=None):
     s.add_argument("--json", action="store_true", help="输出可复核的分类统计")
     s.set_defaults(fn=cmd_stats)
     s = sub.add_parser("pack", help="导出 zip 与单文件版")
+    s.add_argument("--output-dir", help="覆盖外部导出目录；默认数据根下dist/")
     s.set_defaults(fn=cmd_pack)
     a = p.parse_args(argv)
-    a.fn(a)
+    try:
+        configure_storage(a.data_dir)
+        a.fn(a)
+    except (ValueError, OSError) as error:
+        p.exit(1, f"错误：{error}\n")
 
 
 if __name__ == "__main__":
