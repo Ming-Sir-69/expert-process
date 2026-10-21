@@ -1,0 +1,61 @@
+Expert Process
+Copyright 2026 Ming-Sir-69
+
+This project contains rephrased guidance and independently implemented checks
+informed by the following works. Original runtime implementations are not
+vendored. Changes include task-local Markdown records, provider-neutral
+preference scope, a standard-library CLI, and append-only gate responses.
+
+DisCo / AREX-Skill:
+  https://github.com/VectorSpaceLab/AREX-Skill
+  Reference revision: ac3fe1afa80fb9a09775ecfb2b6cc3ba850a2db6
+  Repository-level research documents: Apache License 2.0.
+  Copyright 2026 VectorSpaceLab
+  Creator guidance under cli/: MIT License (DisCo CLI).
+  Copyright (c) 2025 Mario Zechner
+  Scope, evidence, construction, verification and maintenance guidance was
+  rephrased and reorganized; the upstream CLI is not included.
+
+Skill Seekers:
+  https://github.com/yusufkaraaslan/Skill_Seekers
+  Reference revision: 5b5d8dfca263fa76e6daae9f292890b311ef36aa
+  MIT License
+  Copyright (c) 2025 Yusuf Karaaslan
+  Multi-source conflict handling in skill/expert-process/references/integrate.md
+  was adapted from src/skill_seekers/workflows/complex-merge.yaml and condensed for
+  direct model use, without the upstream workflow engine.
+
+OpenAI skill-creator:
+  https://github.com/openai/skills
+  Reference revision: 49f948faa9258a0c61caceaf225e179651397431
+  skills/.system/skill-creator/LICENSE.txt: Apache License 2.0.
+  Guidance on descriptions, degrees of freedom, progressive disclosure and
+  skill packaging was rephrased. Structural validation rules were
+  reimplemented in cli/eca.py using the Python standard library.
+
+The Apache License 2.0 text is provided in LICENSE. The following MIT
+permission and disclaimer are retained for the adapted portions attributed
+above to Mario Zechner and Yusuf Karaaslan:
+
+MIT License
+
+Copyright (c) 2025 Mario Zechner
+Copyright (c) 2025 Yusuf Karaaslan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

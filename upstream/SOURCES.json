@@ -1,0 +1,2141 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "name": "AREX-Skill-portable-source",
+      "repository": "https://github.com/VectorSpaceLab/AREX-Skill.git",
+      "commit": "ac3fe1afa80fb9a09775ecfb2b6cc3ba850a2db6",
+      "directory": "upstream/AREX-Skill-portable-source",
+      "files": [
+        {
+          "path": "CONTRIBUTING.md",
+          "bytes": 8693,
+          "git_blob": "9082bb4288dd481659c5756f1b99dc970de2a1d4",
+          "sha256": "5d9216195324bfa1543237b03121e0021693f6a3c1b641f27c1d2e0bed563a67"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 11344,
+          "git_blob": "a0d225589f299949a1cc8723695ddae77806dccb",
+          "sha256": "53ec4f1fc089929231324592f7cb091c5ed66c242a1083610f27e4d7304d16c9"
+        },
+        {
+          "path": "README.md",
+          "bytes": 17378,
+          "git_blob": "d050f2344a3bd2fa074708d6064d75fe8217f632",
+          "sha256": "04846135417b4d0b53450ccb756ffe8aa107c177b49ae93b0238b7b78f4b58f9"
+        },
+        {
+          "path": "cli/README.md",
+          "bytes": 7561,
+          "git_blob": "d576c54bcd422b9360b06583b87b4cfc54744c73",
+          "sha256": "5e313c8ccfa8f1f50addbd4cd9e87e75015bd2f477f13ae6a453ec6102868867"
+        },
+        {
+          "path": "cli/docs/packages.md",
+          "bytes": 9492,
+          "git_blob": "9e333e44929b1e9eef300e387a5d2af8cc571a87",
+          "sha256": "03a4387cbdc30956da531c7a9dba73bbf31720707ce4dbbf79563791eb2c1126"
+        },
+        {
+          "path": "cli/package.json",
+          "bytes": 3226,
+          "git_blob": "4197f0e3c49baeb12adccfc1a008f98858a699e1",
+          "sha256": "f2bf455dfbc5d44316ecc72f62c0e3693296b800880b1d2c6f0a7e18f807a911"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/README.md",
+          "bytes": 20690,
+          "git_blob": "19b7ab2e2fc9fd7ed31153be2f90e119e9d27e68",
+          "sha256": "910c78835bd7926cdb9073d483fc7784e68be3d83857cf9b301eca043d90945d"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/create-paper-skills/assets/distiller-run-config-template.toml",
+          "bytes": 3638,
+          "git_blob": "336002e9973b6bb405204236b5b8bb9e5e9a4b96",
+          "sha256": "1fc52095c0a1fe964f6672f94d1401c1c20af5aedd672049fd6ae2c8629b179f"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/create-repo-skill/SKILL.md",
+          "bytes": 31224,
+          "git_blob": "eb2042e789ff3c982ce57100835604433c8306ce",
+          "sha256": "aa0b8d6c9ceb1d5a65e412a08640c7a236aceb8fcfd03517b0679d23a47f2da4"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/create-repo-skill/references/input-output-and-structure.md",
+          "bytes": 20667,
+          "git_blob": "8beb0c700e18a4e60bda1660e82798720c37b9fe",
+          "sha256": "fec725ebe558dd76960784151d5fb0bcdd0a0d56058e8203a430f2e022295a60"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/create-repo-skill/references/installed-package-inspection.md",
+          "bytes": 3115,
+          "git_blob": "a5ba46be5314b1f500ed55c2d2ad514517fe35d7",
+          "sha256": "197f7e23eb06c0b00a159ababb74a54b313f0c4fbb51bc1a071ac9f888ee0d18"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/create-repo-skill/references/planning-and-writing.md",
+          "bytes": 39603,
+          "git_blob": "5488576ed228b3a573b83b468726148923ef0353",
+          "sha256": "35a1b4de99b62291c74b9cfaa8c06930836f5720d1c5d555bfe1a5ff3abaa15c"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/create-repo-skill/references/repository-evidence.md",
+          "bytes": 16326,
+          "git_blob": "78e85e90d7c3f88b28550fc211889437d8198eb9",
+          "sha256": "ff5a30f7dba6c3b6787ee76afb39275f6b701b5e637e90062561408a8449670e"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/design-meta-skill/SKILL.md",
+          "bytes": 6376,
+          "git_blob": "20af7b94b665d239c3b1a8ecfabe948fedd06825",
+          "sha256": "c1832ff063025b81cd569afed71f03b5b770deb1589b388d8a4a6af32740ec9c"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/design-meta-skill/references/generation-verification-and-review.md",
+          "bytes": 5619,
+          "git_blob": "548f1229b8636bf4c0e5e41af4746b58d48bf6cb",
+          "sha256": "b4ec35bf19c2ddbc6be11dfaac1de740ff13304774a20d4cab64b18868bebda7"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/design-meta-skill/references/reusable-bundle-specification.md",
+          "bytes": 6555,
+          "git_blob": "48023c768b6c264c046f4afee07404715101ae7b",
+          "sha256": "206b5a920d329934032b937786cb88988e2ee5d183cd578ec10abd96348a8b82"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/design-meta-skill/scripts/import_meta_skill.mjs",
+          "bytes": 11535,
+          "git_blob": "2571256401623c1038a8251e590a3c1ddb83c580",
+          "sha256": "bc1d4e2be584bef5ee8b443a62031fba47d2be8e7adcebdbf2beaf0c81d81339"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/design-meta-skill/scripts/validate_meta_skill.mjs",
+          "bytes": 6280,
+          "git_blob": "5d35c90d30d9166a46ce55a2ced85be3aa8784f9",
+          "sha256": "4bcbc1db75a7b512456454d46224c6005f45f5e0b114c8ba49c19cadeda10726"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/distill-ml-knowledge/SKILL.md",
+          "bytes": 6401,
+          "git_blob": "89357d0f6ff94e8636f865ff78d7cc24bdba9093",
+          "sha256": "6dd18e210086cc652b716e5dded4c90bf2db1b0c4d01ec8c5440fea4ab6572f4"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/distill-ml-knowledge/references/construction-strategy-and-adequacy.md",
+          "bytes": 4613,
+          "git_blob": "311d63af917f6a2e95b2b60c1f4e4f2a251f5367",
+          "sha256": "484831bce45b59c55200f5d072bd9321e40d1cd3490515eec244fde1c37b792f"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/distill-ml-knowledge/references/direct-construction-and-handoff.md",
+          "bytes": 4677,
+          "git_blob": "7a9e2f97d495cc7e074b5e62af25d081ac24d928",
+          "sha256": "924ae69355fad6117d08bd6172b5109ca8ba012381c721d48572256a231f028b"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/distill-ml-knowledge/references/task-and-construction-contract.md",
+          "bytes": 6716,
+          "git_blob": "f4ec3722b5991996527b7769b47439ae3dde0415",
+          "sha256": "b7cf656736ea94fb62b9b3b39eb015fa19a79740606163b3359c36b8a807914f"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/distill-ml-knowledge/scripts/import_operating_skill_graph.mjs",
+          "bytes": 17374,
+          "git_blob": "a264449a7db213a11fffc55fdbf86115d85c976a",
+          "sha256": "323a3890387f9b1507469598f4336e05e678b7046cb8174b8a317f068d365961"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/extend-repo-skill/SKILL.md",
+          "bytes": 11161,
+          "git_blob": "5ab279bea8988cc3080c40be2c9fdd0279db452c",
+          "sha256": "5627a9604abda3878eba258297b59dc599add0521a3d83e06064c797a4921e49"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/extend-repo-skill/references/editing-and-versioning.md",
+          "bytes": 4941,
+          "git_blob": "ee945450aba24e7ea5fe326259449d740359c5ae",
+          "sha256": "5e4b62e392b27eb89e4e8c41364d134e5d6050a81bdd48f37999f74b06cea3de"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/extend-repo-skill/references/extension-planning.md",
+          "bytes": 5514,
+          "git_blob": "175c41d0e9cae5c06bec6c040e07389e180a1883",
+          "sha256": "b1f5e1383e733972a57a8c45349a21a4e22d5a255c01bc784f4bae13635b9015"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/extend-repo-skill/references/verification-and-handoff.md",
+          "bytes": 7684,
+          "git_blob": "54164b35ceb7b2f0dbed0774a8810effed802a17",
+          "sha256": "27fa8f10af9d54c0b46db518db04d53530875fe86f206c03395f3586b072bc72"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/import-repo-skills-to-agent/SKILL.md",
+          "bytes": 9535,
+          "git_blob": "5903ef55b41a12b79cb83cebe041cc3526135fe3",
+          "sha256": "a87b3c19e950d33b105fd400f2549338a428231a56bc8e5931ebaa509a7e64d7"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/import-repo-skills-to-agent/scripts/apply_codex_openai_policy.py",
+          "bytes": 3410,
+          "git_blob": "b1f0c61d6f9299b647b6493c59890590bb3d5f08",
+          "sha256": "df962b3a9ab8fc309eb12fd3a4138f1ddf73dd49af78e78c670ed322b671d6a9"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/import-repo-skills-to-agent/scripts/export_repo_skills_to_agent.mjs",
+          "bytes": 58001,
+          "git_blob": "750e1dfdc717ccb1e2d991787206bec598aeda5a",
+          "sha256": "e4aee5e2786bc7d2f5cd0d05222b0ba1e00277beb2538e65fdc53dbd67f088d4"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/prepare-repo-skill-env/SKILL.md",
+          "bytes": 21109,
+          "git_blob": "9b7af92822bab2e242e3cbeb45b6aa4bb5347798",
+          "sha256": "d98fa8a503e37e85283b8d9603de4c1b5ca616304738383d235cf6df94110a6b"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/prepare-repo-skill-env/references/hardware-and-backends.md",
+          "bytes": 8166,
+          "git_blob": "1c81a74d5ec2c154ed85750759fcd7054c1bc42a",
+          "sha256": "7c2add641e03b8115baf13f629d009404be20850f4ae6e9a204145aef1863999"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/prepare-repo-skill-env/references/install-planning.md",
+          "bytes": 12892,
+          "git_blob": "a770171870767e7431ac208dbfb704b7e7eed9b0",
+          "sha256": "f1269b144e6a44105687a25718b6619c3655ca06e7c773d8290cdb6ab080ed5d"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/prepare-repo-skill-env/references/verification-and-failure-report.md",
+          "bytes": 10803,
+          "git_blob": "8c33ce683a4ee73b648487a093cb992eec039678",
+          "sha256": "3f24548aafbbf7d525ee3e06b64b58a8938bf1bbf975ce6efe7e72ba817aebb6"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/refresh-repo-skill/SKILL.md",
+          "bytes": 12952,
+          "git_blob": "77b13cd0def7173b176b81e25feb836a480fcca9",
+          "sha256": "b5202fcad19b1b3ee70dcdb7f3943605485ba73fc47b4e3b5cb6409a5bb3ca78"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/refresh-repo-skill/references/change-detection-and-staleness-audit.md",
+          "bytes": 8253,
+          "git_blob": "67ac803cc88f4df42f5f14078471abfd5c146719",
+          "sha256": "7e3646f3f685aa7cd6e7fd288f24f349c821c105f88d62450845bd9a2d08a077"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/refresh-repo-skill/references/refresh-editing.md",
+          "bytes": 7975,
+          "git_blob": "846fbf41e43aa87f061be3e303e0b165e7afb625",
+          "sha256": "c1476369eb2fe0a00883a8feae8911b400336b99f798c154568663a803a9a556"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/refresh-repo-skill/references/verification-and-handoff.md",
+          "bytes": 9027,
+          "git_blob": "67693f9422f6e97812d3e03310cdceeb0e5f8239",
+          "sha256": "7abff080adf9e0153f2cf527776e63e6fd464207376bdc8c4a6db4225875a949"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/refresh-repo-skill/scripts/check_repo_provenance.py",
+          "bytes": 6278,
+          "git_blob": "0456a525891ee160b693effc4fdf0392aa7cce1c",
+          "sha256": "20a92393328146067630bd62de77016c17f95b353421ee5e3a41a09ccfa48ef8"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/SKILL.md",
+          "bytes": 19201,
+          "git_blob": "81f083e2c929cefa8dce4394d3eed026cdfbc1c0",
+          "sha256": "3146b0a967ea53efbd3aa5e463af3be05fdfff1015da9e0a473e4a54889f3d19"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/references/evaluation-verification-and-handoff.md",
+          "bytes": 44743,
+          "git_blob": "d2764064e49a431fd1bf2ec1178ab6fe6bda6e24",
+          "sha256": "5ed7cac2ed810f9e25ef8783ba02373d85c3c7126e3412216f81817d15d439dd"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/references/usability-test-cases.md",
+          "bytes": 14082,
+          "git_blob": "92b1595c3e8af5d50f942bdf693f26c79b10e7e0",
+          "sha256": "c54d03ba157327fa8522cb76d8b0607fbe825c701b760966d24e61dd075c97c4"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/apply_repo_license.mjs",
+          "bytes": 4816,
+          "git_blob": "7887751ad0946afa2eedd1ced80e03caefc544c4",
+          "sha256": "caa62e02ebba2890efc06584d8c97c0e8cf2b2128396760f6b83a26e78ebccd1"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/build_repo_skills_collection.mjs",
+          "bytes": 36790,
+          "git_blob": "ad948a3555cce8cd8910b38677347fce427b0cc4",
+          "sha256": "546c292200eb062d1e6dc326422b399cf5a2d34a391a5760e09f43130d000c89"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/import_repo_skill.mjs",
+          "bytes": 30597,
+          "git_blob": "4a84540370df125fcb39d187148f9901fc576f31",
+          "sha256": "154b03e936dafe0c7ae5f51ef17e7ec129b0a0c8570fbfeae2eb13fa7e2b5b1f"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/license-validation.mjs",
+          "bytes": 4012,
+          "git_blob": "998893f4bf0c2d858ec0b67e3d95b4f2b1556c0e",
+          "sha256": "e3f563219e80c063fb7c29f080c0d506982436a270a778f75f2dbe19544b09be"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/resolve_repo_license.mjs",
+          "bytes": 3833,
+          "git_blob": "c0ba5b3a8d9bea2abeb6dba6f71e068b248b548b",
+          "sha256": "eb5266080766f24be2d3a908f5110ae5ac6826ac8c4da5283e39a5d799706659"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/run_native_cases.py",
+          "bytes": 7325,
+          "git_blob": "e279175a113dafdfa2886f92f64c14700fb9daeb",
+          "sha256": "2ad119a09ec61ecb245ba9fef9bc145c42cb8ad40a8d7a1b293b5a5b61cfbd76"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/sync_repo_license.mjs",
+          "bytes": 2889,
+          "git_blob": "03e8024bb83f3e4a8dc35a9207aff249bdf29640",
+          "sha256": "8d91b06e2404dc7bcc5cba4b18fec5720851d2c2266f3945957d6acfdd776a32"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/update_repo_skills_router.mjs",
+          "bytes": 53962,
+          "git_blob": "3b1b82f609592224befc5157394aefc43ad75088",
+          "sha256": "0c6b0fc21af09982fbd250f0411e14019a5d5057100e53087fb956920f88f363"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/verify-repo-skill/scripts/with_import_lock.mjs",
+          "bytes": 5322,
+          "git_blob": "92fffdbd1241d7b99492bc186bedde6459eb5be3",
+          "sha256": "16bb2ca0ae9a56d1ba1644665cb99a7d97fe76ef55a3588c58c7b667c04ad935"
+        },
+        {
+          "path": "cli/packages/coding-agent/src/disco/skills/workflow-authoring/SKILL.md",
+          "bytes": 5346,
+          "git_blob": "16920e77f615cd9761c2286efdf03d7ec1d8c6d4",
+          "sha256": "b34b31dde6e585fbbe1deb15801ace211f00e709cc30cda161c311d4caad1c58"
+        },
+        {
+          "path": "docs/architecture.md",
+          "bytes": 22844,
+          "git_blob": "5a9cabbf97a3b18b76759b637bc02b68aec11969",
+          "sha256": "a9b96e7ed5a0b1794e61d0fd7e38870562f5fd0be896bc1ac8b22ebbe380b220"
+        },
+        {
+          "path": "docs/disco-meta-skills.md",
+          "bytes": 11972,
+          "git_blob": "c39385f04516fbe7c42b04ee2b4c10529b8269bb",
+          "sha256": "4509434b976bd49c2052d5d038ef9876cd44dc8bee100b986acee679739d2f18"
+        },
+        {
+          "path": "docs/disco-meta-skills.zh.md",
+          "bytes": 11564,
+          "git_blob": "f3805efbe6655c88c09ffec7b22e481bdb947b92",
+          "sha256": "bcae06471fda296e00b5a95d9cde1c0678d77bbdb8ebb073f6414eba99c8c43a"
+        },
+        {
+          "path": "docs/disco-workflows.md",
+          "bytes": 11484,
+          "git_blob": "7b7a03369862d438a30cd523dda04e3d1d18e9c2",
+          "sha256": "9d6f35be881bd9567e114a767dabf67277c130f000154f01b16cc15051e8fe7f"
+        },
+        {
+          "path": "docs/installation.md",
+          "bytes": 6998,
+          "git_blob": "ed686845d91efaec89b19fa67f70cd7a60656bd7",
+          "sha256": "614a3debb15bf6311b50b32ac436554bb796f6588e4391f79c510233a4b8b6fc"
+        },
+        {
+          "path": "examples/README.md",
+          "bytes": 4851,
+          "git_blob": "14e4e8c4e1b1d1dfaf574c60b77d444de519c002",
+          "sha256": "d2d88af9d41ace3e3c599f436ca54e292a03155287a5ab34394fd4ee91843c81"
+        },
+        {
+          "path": "skills/README.md",
+          "bytes": 4327,
+          "git_blob": "d521aed501f64b030dd020ef905ffdc07c1eaf71",
+          "sha256": "9450193aa887b4fa84630af8f4b7f05ce8d87c4df41967a86ddc21a8ab0da030"
+        }
+      ]
+    },
+    {
+      "name": "Skill_Seekers",
+      "repository": "https://github.com/yusufkaraaslan/Skill_Seekers.git",
+      "commit": "5b5d8dfca263fa76e6daae9f292890b311ef36aa",
+      "directory": "upstream/Skill_Seekers",
+      "files": [
+        {
+          "path": "CHANGELOG.md",
+          "bytes": 221470,
+          "git_blob": "14003e4463206a206a54e8f1d500b037c2e75f96",
+          "sha256": "de1e95af7c0301ed1822fea1d297c77cad3280ab2ad9b8f2f1e35ac27eeb69b0"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "bytes": 17710,
+          "git_blob": "607380c7a8c858cf389a6c91fe0dd27ce6049198",
+          "sha256": "5e18de5a70caa83497a6df63e929686b04521ee8973b40453be4d25eced54c33"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1072,
+          "git_blob": "563effa41c51ef1589d0bcee82aaef8f911160fc",
+          "sha256": "fbc4fbffc4598eef4178b4432a4afaa08af9bf9e22724dfd0b45c912a75a1999"
+        },
+        {
+          "path": "README.ar.md",
+          "bytes": 26421,
+          "git_blob": "25cb97b27768d60735287b146b455f4d61082724",
+          "sha256": "095e6b3579165226e6b3c319e117d6f4a629cc479bf6579892df5b640d1e7379"
+        },
+        {
+          "path": "README.de.md",
+          "bytes": 21962,
+          "git_blob": "7a2d5d9feeb47df303a39637bb6719c30558dcb7",
+          "sha256": "171524ceac6f74f2a80e923ea1c53a1d03dea10e392a28a38da0b11449de262b"
+        },
+        {
+          "path": "README.es.md",
+          "bytes": 22826,
+          "git_blob": "aa94440e8da3ecfa57143a3961034ee08c748cf2",
+          "sha256": "5902528ef229db558ebb89a0799e0dd336fdc6c5cb9fcf073b9828b0d795e282"
+        },
+        {
+          "path": "README.fr.md",
+          "bytes": 22966,
+          "git_blob": "b9a95383f721c429f3f92e60bac53c6e853c7017",
+          "sha256": "8c8986a2017dca33359ae3f588d5180b89070893c45e5349fdabd37a8bac39c0"
+        },
+        {
+          "path": "README.hi.md",
+          "bytes": 32811,
+          "git_blob": "e706e2920a28521c985d2f8ad8e6e1cfcddc0eff",
+          "sha256": "8fc0709fb26a8d737829b4bb266081f75f68a992a5f9fed2596fe81322ef5a16"
+        },
+        {
+          "path": "README.ja.md",
+          "bytes": 25722,
+          "git_blob": "4e479d7b1e25bbe5504c02b675f208e70e009ca9",
+          "sha256": "6eccf2b8e538863937817e19856b12bac32f130e5430b98fc8af958d17c12f37"
+        },
+        {
+          "path": "README.ko.md",
+          "bytes": 22752,
+          "git_blob": "6f714a38668a9c80a0254d94140f398ebbff2a0a",
+          "sha256": "edfae5b59393ed11312573f2b38414a30e0726c8a1c58c8bdcc7f5658df1200a"
+        },
+        {
+          "path": "README.md",
+          "bytes": 21001,
+          "git_blob": "cc3688d2d71d86d481d493e483f6dfd1ad236c82",
+          "sha256": "a306c13254c85b1e9f513dbfff209c96efa390eba747742819b38c7305918a96"
+        },
+        {
+          "path": "README.pt-BR.md",
+          "bytes": 22468,
+          "git_blob": "9c27a8ee5ddaa550b5b7326006314734f9b0f94f",
+          "sha256": "516f8c92f6c7a41579e3a1bf87da4c486effc3a98c9737f65cb86b6c56fb364e"
+        },
+        {
+          "path": "README.ru.md",
+          "bytes": 29133,
+          "git_blob": "e934e48bf53fd750c8cfdef7d6f30332a5617b56",
+          "sha256": "5732fc8fd721e5cc189b7d4612670cb89a9c2ec416448b3b7694cdbb0133c582"
+        },
+        {
+          "path": "README.tr.md",
+          "bytes": 22453,
+          "git_blob": "d46532e6cc3cafac4300352207fdd81bce26b3f9",
+          "sha256": "5919efaf3174f3a87d35efa1e78559f12805ccfc63e9ed6eae98dd711d57aa42"
+        },
+        {
+          "path": "README.zh-CN.md",
+          "bytes": 20776,
+          "git_blob": "419f14c2e862717735ceb498a57610b39650eff8",
+          "sha256": "32ca66e52252c215a677af3272cb8f7faf5a155d67a4b192d4824a04f758daa6"
+        },
+        {
+          "path": "SPONSORSHIP.md",
+          "bytes": 4307,
+          "git_blob": "122b9b7d8f21e5ae9ae0e36760f3da97312731fd",
+          "sha256": "1ed691df33fc884d5a50764544cd12a2103b3300de0a76a8ece7d6d1c4304275"
+        },
+        {
+          "path": "docker-compose.yml",
+          "bytes": 2621,
+          "git_blob": "ed9146d5f89f867b5061fc21b3bf659f06c207dc",
+          "sha256": "ded4968392970a9d802aa0899205059c121b9fae5f1a2aeecf4a61ee1d5da7f4"
+        },
+        {
+          "path": "docs/README.md",
+          "bytes": 7047,
+          "git_blob": "cbe44f3df55784ab83a8c16e0b918a33deb896f0",
+          "sha256": "80231adea6d064b426478d7711b35e0a3fc099fc5ec91e04b702a4c3c28efa12"
+        },
+        {
+          "path": "docs/TROUBLESHOOTING.md",
+          "bytes": 29109,
+          "git_blob": "7909f69205f19f0bef6b483472ce402cc8009fad",
+          "sha256": "d03c59532fdea35c3076d7ed620290d1fee7d216717f28484c1602d5dc25b4d4"
+        },
+        {
+          "path": "docs/UML/exports/00_package_overview.png",
+          "bytes": 110434,
+          "git_blob": "a842061ee3bffecf947b5be19ae97c533dc3d000",
+          "sha256": "90444db384792d09c8d028f6caa9d47e47a0dd6eabff4fb9a54b626016a62c38"
+        },
+        {
+          "path": "docs/UML/exports/01_cli_core.png",
+          "bytes": 144611,
+          "git_blob": "fed05c80d10a48d50c5823ab54ff4aeb7ff430e3",
+          "sha256": "54837adf70b5c3f4c7f96b67414f7a35c232bd7f006573e231f7881cce569d36"
+        },
+        {
+          "path": "docs/UML/exports/02_scrapers.png",
+          "bytes": 582084,
+          "git_blob": "3efd62f1d5094629d46292c6b806f79e0d3cfc4b",
+          "sha256": "455a4f8b03d355acf09d7b3e0f3b3a8e3c993f32906dc7c8ab41669dad78415f"
+        },
+        {
+          "path": "docs/UML/exports/03_adaptors.png",
+          "bytes": 767716,
+          "git_blob": "3c0405238582781329bfd9b6b526bffc111adb63",
+          "sha256": "0d5a768bf309f7c4e01a05b323356808193b32640bc2ea7627e2f174e3f467d3"
+        },
+        {
+          "path": "docs/UML/exports/04_analysis.png",
+          "bytes": 468730,
+          "git_blob": "93a732e5389a2c578f69a2dda51dee17287922a9",
+          "sha256": "990cba22053081fbd3dd3422a36415aec409692ddb3035f2d81d198bb26ed524"
+        },
+        {
+          "path": "docs/UML/exports/05_enhancement.png",
+          "bytes": 348725,
+          "git_blob": "6f594ab8902a2ccff4ae3252264558c0d357d599",
+          "sha256": "7773a70ceb7d727863830029218a76daebe5efdb530a9c84445ccdeedabb055d"
+        },
+        {
+          "path": "docs/UML/exports/06_packaging.png",
+          "bytes": 133058,
+          "git_blob": "db644b78b2369cfec01ef112c7cfffeb2a61044e",
+          "sha256": "d084d5b750aaf8716a5021f0582e3d3c96864940db0122887370d7897f7235b0"
+        },
+        {
+          "path": "docs/UML/exports/07_mcp_server.png",
+          "bytes": 502436,
+          "git_blob": "b61c1ca6e1f6a47224bf092b831260aec8a7ff56",
+          "sha256": "58bb6b78e5bb5432a9ebafd6f839fd8f442caba749798de437c1a8a75fd8a50c"
+        },
+        {
+          "path": "docs/UML/exports/08_sync.png",
+          "bytes": 219599,
+          "git_blob": "b82fa64a09e8767c68c3c97c37dce38387d6e2b3",
+          "sha256": "66667e4a30604ef5860d633b4bd0827c385dde5b54ef291c1da97f8544cf6acc"
+        },
+        {
+          "path": "docs/UML/exports/09_parsers.png",
+          "bytes": 116140,
+          "git_blob": "bd574f4eb0cc70ad1877f287cca52a94a11ff7a2",
+          "sha256": "b313759fb2a7fc40ddcf92b35ce1df318871237b0bdc2ebf7047bc0f2026a703"
+        },
+        {
+          "path": "docs/UML/exports/10_storage.png",
+          "bytes": 267650,
+          "git_blob": "d8db2a0df92d72a2b9adfe5d7d886603eef26fc8",
+          "sha256": "5a547cbac12ced5ecb2afb6a8c8eb96d3ee734335e613aec630a764405571425"
+        },
+        {
+          "path": "docs/UML/exports/11_embedding.png",
+          "bytes": 159619,
+          "git_blob": "0a1deb1b46f5b8cf7d87113e4c2ba1afa0f27ff1",
+          "sha256": "967dce1f64198e412c109bad0906d79f43456db0c4bc50d3aea3517b0ee7415c"
+        },
+        {
+          "path": "docs/UML/exports/12_benchmark.png",
+          "bytes": 130307,
+          "git_blob": "80a59f689bce1dfdef98cf9e09b1e048f18399af",
+          "sha256": "d105a3f52bda0591e72768751961398727ef7f0313b5fd8cdae9295e9af04841"
+        },
+        {
+          "path": "docs/UML/exports/13_utilities.png",
+          "bytes": 270405,
+          "git_blob": "623975af1561f6f4da94c8b5c6525f9b494b3e3c",
+          "sha256": "97e3b83b3569ed1ee9521bd0f54e1d1e82bc95bd88373d6403aa2eb01d8bcffd"
+        },
+        {
+          "path": "docs/UML/exports/14_create_pipeline_sequence.png",
+          "bytes": 118277,
+          "git_blob": "9157acc8f50bb21e646ede1eb93726b53d23500c",
+          "sha256": "f66bd734af0c81d06932779f22b9bdec024fee5c28af9307075f368db35c7266"
+        },
+        {
+          "path": "docs/UML/exports/15_github_unified_sequence.png",
+          "bytes": 172303,
+          "git_blob": "7717038f944164c722aeee865cdb427eac6ff931",
+          "sha256": "935c47c1b5cd6cde776f91e8924eb0c8bcac8cfd30ddd72f087244ab9eea2306"
+        },
+        {
+          "path": "docs/UML/exports/16_source_detection_activity.png",
+          "bytes": 175662,
+          "git_blob": "1cbf2e9d14b73aae741c9ae8f6d74e104cd58984",
+          "sha256": "ad2b9477cde5fc0336446902eb8d8be883ed5eb9cbdaab138d2bc83fd6ae5862"
+        },
+        {
+          "path": "docs/UML/exports/17_mcp_invocation_sequence.png",
+          "bytes": 90341,
+          "git_blob": "528f34ad9cf308c772f94e5b0bf3774ac89ea7d3",
+          "sha256": "4b0b7086220554f6c631b1b9c62923e2111e3c3f9636ca69a9361682c163ac54"
+        },
+        {
+          "path": "docs/UML/exports/18_enhancement_activity.png",
+          "bytes": 118767,
+          "git_blob": "095d574761a3a4e7a9d1630329dc48afcbd593a4",
+          "sha256": "4218b68dee46f3a8c12d800ed61a7fdae59df77feffbb54bfa4b583d3dfc674b"
+        },
+        {
+          "path": "docs/UML/exports/19_runtime_components.png",
+          "bytes": 95882,
+          "git_blob": "b917c99ada599926cd93bf2eb0929828ab066746",
+          "sha256": "c90f52a576c790de69a110a4536fc0b12d93aad46a306bb3009f87b5d85dfaff"
+        },
+        {
+          "path": "docs/UML/exports/20_browser_rendering_sequence.png",
+          "bytes": 102711,
+          "git_blob": "b49860cce7d5189932bf2222a40ed5952d9111b3",
+          "sha256": "4abf876460f83449324c352e180f28fd924533481a8c719956a4271dac930dfb"
+        },
+        {
+          "path": "docs/UML_ARCHITECTURE.md",
+          "bytes": 18826,
+          "git_blob": "eaac8b90fd19044bf7424dd239df9ab8573880c4",
+          "sha256": "b2f25a5201438897a1d4e76dcee1bfce10f416f1fe76a683d0596633b78f647e"
+        },
+        {
+          "path": "docs/UNIFICATION_PLAN.md",
+          "bytes": 17613,
+          "git_blob": "f44d9eefb44250a910fd9125d9e777c008903616",
+          "sha256": "a5c3daaa3bd05597bc95829ee731896694435a96064b173bb9c9308b8ac9e099"
+        },
+        {
+          "path": "docs/VIDEO_GUIDE.md",
+          "bytes": 19914,
+          "git_blob": "e6e6aa1b98b9866e51b4b6b3a594a5f7c7f9bd39",
+          "sha256": "d1835c121ab77310d2afcef8ca1b7a51917b3587db06069f1fc98fe97123765e"
+        },
+        {
+          "path": "docs/features/ENHANCEMENT_MODES.md",
+          "bytes": 14112,
+          "git_blob": "bb27e89842f1e99218b65498884b56d5aeb2a3ce",
+          "sha256": "232f7e98f066953071cd9023d8124007fc77ec9b74e437f4f539d65ec88511db"
+        },
+        {
+          "path": "docs/features/HOW_TO_GUIDES.md",
+          "bytes": 33340,
+          "git_blob": "b9dbc69161f97be545ceb32484c17efe0381e11f",
+          "sha256": "7a4aa9417b21800faddea614e1d87badf903b83a4a2f3c7af38a2c61cd30ee57"
+        },
+        {
+          "path": "docs/features/PATTERN_DETECTION.md",
+          "bytes": 13231,
+          "git_blob": "a33176e5d166889b6d658bc4f834665d751324cc",
+          "sha256": "4ca9a60ac6c8e5396f13b83af0f92215c0f0f4e08af99407e3052d9ea0e8c417"
+        },
+        {
+          "path": "docs/features/SKILL_SEARCH_INDEX.md",
+          "bytes": 2656,
+          "git_blob": "8c4df945b3c89541bf36880727b551c2491661c8",
+          "sha256": "3764bbff6b84190ef9f7ce696e188a84f70ef78c9294f8687b6f7e95c3f7c369"
+        },
+        {
+          "path": "docs/features/TEST_EXAMPLE_EXTRACTION.md",
+          "bytes": 11583,
+          "git_blob": "98d1b88a0fed931c6e911e60f794e1df036f23c9",
+          "sha256": "aa6a5ef82144b39d0ba4581dd44ed3c00509dca6a1ffd0eab72b855c7154a46b"
+        },
+        {
+          "path": "docs/features/UNIFIED_SCRAPING.md",
+          "bytes": 25673,
+          "git_blob": "0780ef09c04a538059ea6f064082c426b4df43ad",
+          "sha256": "02c0f8c46aa1984c9dc46fd824a193616bf487d6658c0eec47281d088f1d04ac"
+        },
+        {
+          "path": "docs/getting-started/02-quick-start.md",
+          "bytes": 8517,
+          "git_blob": "a2100896ea4364621126bf2296f4dbd98189412b",
+          "sha256": "dfc18b597ab51a39fd52d486ec1b122f81d259fb4fd5c5898c76c2a6260ea79d"
+        },
+        {
+          "path": "docs/getting-started/BULLETPROOF_QUICKSTART.md",
+          "bytes": 14163,
+          "git_blob": "15a6be0fd90e0d43a83153375713fc2a3b1f3f5d",
+          "sha256": "1a954b5d4a138431aeb0523e42d9ec273faa2151edbe638caa519a41a46efec2"
+        },
+        {
+          "path": "docs/guides/HTTP_TRANSPORT.md",
+          "bytes": 7028,
+          "git_blob": "9b42db7bc7c346c4ac3f39fd3af93087f16c4725",
+          "sha256": "5ee7de2b0c984f80b1ce1ab83a2d7ed00bc645308bf58ffc896feaf973e8401c"
+        },
+        {
+          "path": "docs/guides/MCP_SETUP.md",
+          "bytes": 33424,
+          "git_blob": "d057a298105cebf8489de4a3613d5173c3c5df15",
+          "sha256": "91065fb6568b60da9d0c525ed2e81559b11aa8fc42aeb8dca649690fd492a7fe"
+        },
+        {
+          "path": "docs/guides/MULTI_AGENT_SETUP.md",
+          "bytes": 14591,
+          "git_blob": "d7e056a422b1db5184d96e872948c018081a9f4e",
+          "sha256": "886e108f2717a407472dae540c1ee1ff8b6d6e17be41f5f360de9045f7c193a1"
+        },
+        {
+          "path": "docs/guides/UPLOAD_GUIDE.md",
+          "bytes": 11212,
+          "git_blob": "b1703a0b5b8030992156e2fb44d975cb789e99cf",
+          "sha256": "2955b8d73918de09e47c982f1e142730cbb9200bcc20e35e308949b59636f2ab"
+        },
+        {
+          "path": "docs/integrations/CLINE.md",
+          "bytes": 24198,
+          "git_blob": "42f320a47f20c3fb492201144424917899659a8f",
+          "sha256": "e4c5dcceacc58b25c7a078398a0309ce652c0da0f489c7aa3fa7adc1616c9ca8"
+        },
+        {
+          "path": "docs/integrations/CURSOR.md",
+          "bytes": 16938,
+          "git_blob": "96a7c831218bc3b54d370dc519589deab06db662",
+          "sha256": "7d65cff0542926ae14398df22e1a33b10ddd1705dd253cc62aa8229047027021"
+        },
+        {
+          "path": "docs/integrations/LANGCHAIN.md",
+          "bytes": 12986,
+          "git_blob": "7b534be7007e409838f557d7fffb200d84eb3b87",
+          "sha256": "bdb3807549d38cf763bae785a3af5602a0a627d529b04693c775d2c698114ff7"
+        },
+        {
+          "path": "docs/integrations/MULTI_LLM_SUPPORT.md",
+          "bytes": 11955,
+          "git_blob": "3d61b6f9de989eb7fa9362f96edee9aa1eea89ca",
+          "sha256": "563c7a68f3aae9cbdefce25f583746deecd07c7c90c9be6a6f490f0dc59b567c"
+        },
+        {
+          "path": "docs/integrations/RAG_PIPELINES.md",
+          "bytes": 29068,
+          "git_blob": "faf29afc2d875c139e96b3cb2f6577ad2940c39f",
+          "sha256": "62b73e7dc1e42c5edafaa2d3c4ec8d6e9395875e49788b55233ed4cca0376d05"
+        },
+        {
+          "path": "docs/integrations/WINDSURF.md",
+          "bytes": 22805,
+          "git_blob": "e146a85cb0056e1cf2e1f343601ea8f2daf77fc9",
+          "sha256": "416e91a94d66255be7a374314124207d65b7d5a58e720c76c94ffda65c817c5c"
+        },
+        {
+          "path": "docs/reference/API_REFERENCE.md",
+          "bytes": 33251,
+          "git_blob": "038e3572bdd3dcaf3fad21b1a492a1a592b1ea8f",
+          "sha256": "1fdc6f5bf755614d37a8a262537cc26511f51d33e3936d2e6dfcb3bc4c278e0a"
+        },
+        {
+          "path": "docs/reference/CLI_REFERENCE.md",
+          "bytes": 53836,
+          "git_blob": "8db0b305188246074aad074db71ac685ff324467",
+          "sha256": "9662a761b156037d1e29005a0d722029eb3bf48222fe1d08cc2c104689923308"
+        },
+        {
+          "path": "docs/reference/CODE_QUALITY.md",
+          "bytes": 16435,
+          "git_blob": "3eb3505611539d64ca1ea4940c8baca7e5d0f7ab",
+          "sha256": "65143115c813e281bee18b95ada1482f5545f11d41449dadd4728c91b33e7226"
+        },
+        {
+          "path": "docs/reference/CONFIG_FORMAT.md",
+          "bytes": 22318,
+          "git_blob": "c391fee4bc9320988f09802e1b4aa183e4bfc1bd",
+          "sha256": "51a61327c8a3463bc0577952557d7bc0e3452ad496b18bb19e741f3a9813d6b9"
+        },
+        {
+          "path": "docs/reference/ENVIRONMENT_VARIABLES.md",
+          "bytes": 17560,
+          "git_blob": "bbb98afc9f4a4a0fad869601ef2d284089ad5333",
+          "sha256": "caa8de00cf2e52fde711fcd165f3a1d40f1f14e4b1eac3a6367af92e17f01ef2"
+        },
+        {
+          "path": "docs/reference/FEATURE_MATRIX.md",
+          "bytes": 15214,
+          "git_blob": "1feb59d581c7fef63a3f2ea294c8b535d02f86ac",
+          "sha256": "3a985fb8ee396b3e6b91bfef5c19c6f001e567acc341324dc8e3f6841dea1429"
+        },
+        {
+          "path": "docs/reference/LARGE_DOCUMENTATION.md",
+          "bytes": 9746,
+          "git_blob": "22d2c4a8b55c96e7279c95e26f60c16d23ef5001",
+          "sha256": "24663ae28b5b1f56552fdcdd3db6278f987ebfef89a5371179199e5452b38e72"
+        },
+        {
+          "path": "docs/reference/LLMS_TXT_SUPPORT.md",
+          "bytes": 1385,
+          "git_blob": "6e38517a80b773ddeda4a2d59e7128d1b4aa6857",
+          "sha256": "f5d3b7901bb13868b7874a0b4affbcd7b45ef91664cd6c15c638a72f0e2e637a"
+        },
+        {
+          "path": "docs/reference/MCP_REFERENCE.md",
+          "bytes": 25603,
+          "git_blob": "f420355de8a387ba151fcfc3b6686224d4892dc7",
+          "sha256": "fd9a61fee4816fdca371058dfb9ac6b53eca020b91d2cd96368af2dca5ad903b"
+        },
+        {
+          "path": "docs/reference/SKILL_ARCHITECTURE.md",
+          "bytes": 23752,
+          "git_blob": "ed3e2d23430ca675643b1dbd1e5e9ee87a4a17c3",
+          "sha256": "f255115ef0348aa9c389edf3f8b3a07f54af4bff5b4124ca965a5be8d38cec49"
+        },
+        {
+          "path": "docs/user-guide/01-core-concepts.md",
+          "bytes": 11718,
+          "git_blob": "8a0a1ab5c36aee1a1566e86c95516cc3239025be",
+          "sha256": "500e8e3e79729661c530bd3e56a64049437fd161ccc44a3ece95fa4fcf4fef54"
+        },
+        {
+          "path": "docs/user-guide/02-scraping.md",
+          "bytes": 13781,
+          "git_blob": "300becdbff07b2e48de7543c4b71e19e66208fac",
+          "sha256": "5d05686191fd9001cfc49e9cbdcdf50db6cdc1b2852c85825316090a320bac6b"
+        },
+        {
+          "path": "docs/user-guide/03-enhancement.md",
+          "bytes": 9782,
+          "git_blob": "1dbb8446fda3581db930e8319c9b5d62ee0d51a2",
+          "sha256": "6cdd8339002b136d12d840aa9ebb0c09eeeee97a66c54e89ddcd825434f52559"
+        },
+        {
+          "path": "docs/user-guide/04-packaging.md",
+          "bytes": 11730,
+          "git_blob": "3c877f7f9a7b08a55efe68c5806dc8182325cf51",
+          "sha256": "ecc0116e1e368a15716a4f0dffb14fd401a0434d189a2427f2a482797fa9ff2f"
+        },
+        {
+          "path": "docs/user-guide/05-workflows.md",
+          "bytes": 13946,
+          "git_blob": "ebbef73b3b20c711a4b4c15f399322ca0fe1d560",
+          "sha256": "249e539f507c390f1095c5fbd006caad0c042f0ae22ec2d6a2e9a84081ee95f5"
+        },
+        {
+          "path": "docs/user-guide/06-troubleshooting.md",
+          "bytes": 2622,
+          "git_blob": "ece30c5700b4540fcab177b3d222b0405c026bd3",
+          "sha256": "ef6ac36b17f8fec97165076115314d56c608f78962496ff55d9e6d51bd5cf145"
+        },
+        {
+          "path": "pyproject.toml",
+          "bytes": 12637,
+          "git_blob": "3d51dd6f35cabd32d6e954e5ba4cb2a84a268071",
+          "sha256": "6fbc5eba3173f64ff7943476058e7a10477c41011697b1c233a6b47b3b7d152d"
+        },
+        {
+          "path": "src/skill_seekers/__init__.py",
+          "bytes": 416,
+          "git_blob": "8bbe6b1512caa415df80d9d9a9760a982963c3e9",
+          "sha256": "19efa685bd1e30d9ee6de32ce93a02e182fcacc3a5f58f7ebca80c1c4fb797a5"
+        },
+        {
+          "path": "src/skill_seekers/_version.py",
+          "bytes": 1354,
+          "git_blob": "285552bccc5059dd015d96d05480cacfc39e6de2",
+          "sha256": "521e2bac16326454d2f7e6a48ea5e581e1d635f7e5570b9bbb3e9f8503944820"
+        },
+        {
+          "path": "src/skill_seekers/cli/__init__.py",
+          "bytes": 1513,
+          "git_blob": "373451e60f5059f7f533ab3b5227b1bd25f075fe",
+          "sha256": "7b140917584e82d7c2b65fb6cad31bd91594d02e1fce89f2b72bac41ba54c1c2"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/__init__.py",
+          "bytes": 7385,
+          "git_blob": "eadfbbe69f581d163c0f5d73c6fda2f74b5277a5",
+          "sha256": "341dafadeea59452f17ceaf46137e9ea7a21c43a8515d50c3f0e85f381d20a39"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/atlas.py",
+          "bytes": 500,
+          "git_blob": "4119b95c17e7dc9291310e844d8638fccb75110d",
+          "sha256": "ce823bd5a49f91851640102b0c71634a425979cf03ad97be90a3bc8abe97e0a4"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/base.py",
+          "bytes": 26141,
+          "git_blob": "8beab6f17598a582a3ad42c38f318555c4ff0d0c",
+          "sha256": "a6e10ad93576c460123113a3f40f51b7be9103f0d89d7f1f4b5aa3eb991467d6"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/chroma.py",
+          "bytes": 16193,
+          "git_blob": "d547a82a71f3c5e3060cdf4428a95ec129fef315",
+          "sha256": "e1f0dd64b83ee1288e140fcefe1c4eb954a96a6e21b9a3e9365ae4a025dc9784"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/claude.py",
+          "bytes": 13127,
+          "git_blob": "4722921950f58aba98a56e55ecf839952c1f6375",
+          "sha256": "afc106bb33ecaf25ec0e751677723c75831260f4da3e541abe73e601baebfc07"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/deepseek.py",
+          "bytes": 495,
+          "git_blob": "513537dbf26b63197971067f84272c778d3b20f4",
+          "sha256": "5b5a560cda7415d18c3c94e1311bb0bd4198ec12c25ad40fdbbf4254ef407589"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/faiss_helpers.py",
+          "bytes": 15370,
+          "git_blob": "e7c561c0c3642e4e4d46f34fd07efb5105ab0f0e",
+          "sha256": "56e41e91eddf01855c3001b0b76a67bc0c2be86a5130b607d27566759057817b"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/fireworks.py",
+          "bytes": 542,
+          "git_blob": "7f4bae912a151525d50f211a2515f7d8977c9cd4",
+          "sha256": "35a160e9627bba71fd81bf363c0d029afa084db9c6cde7ae9e1f86ff6be5ca00"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/gemini.py",
+          "bytes": 12252,
+          "git_blob": "d2bd15325a97f4e60460f4a6fd3a0eda05b3ee14",
+          "sha256": "b3b0ff8c51c4fd148a88ca9156776b160b7899a37958a81bb24c7454bc8f900b"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/haystack.py",
+          "bytes": 11439,
+          "git_blob": "5af303282a9b45690183b737f535b80b7bac77c5",
+          "sha256": "7f724a2fc9ab069c2d6df53d4c431740512d98155ca770a4cad9840d60e3646f"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/ibm_bob.py",
+          "bytes": 4939,
+          "git_blob": "453f8b3386af64831567fb2527863e9b4653a63f",
+          "sha256": "1d7da8b67e8ea323fc29139fe67829dec782ac195bec26c23ca97b42448b758a"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/kimi.py",
+          "bytes": 517,
+          "git_blob": "4a383891ace085470a1d8e8844dd79a17d67ca24",
+          "sha256": "bf3652e8e5c62255474025058569e08271099e62602f14a6ef44851f86d49e2e"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/langchain.py",
+          "bytes": 11184,
+          "git_blob": "6f2f7a286dd1cb5e5cda6d76fef82f406603c8e1",
+          "sha256": "2543ef785f71ec44ef3ce20ddef311df9cb09d19ebc9f014107cc04ae08f7a45"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/llama_index.py",
+          "bytes": 11941,
+          "git_blob": "c9a5ac4c4e9e0b2c4d926bf8c9f75a6ba49f218e",
+          "sha256": "ada848cb6c3726b6216e47156e9d92efe97008d6818b62e99edd807895f603e6"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/markdown.py",
+          "bytes": 8609,
+          "git_blob": "a5961fb292b1254b07967a050f4794b4a85e0b13",
+          "sha256": "3321323e63c302d7fac4f996dfa791d4ff09c8510528d0e452718c775ede4e27"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/minimax.py",
+          "bytes": 1142,
+          "git_blob": "836bcd95641b83179db7d217232ef1bc3fdc0629",
+          "sha256": "fd86e433c1b2c5f408d6efe0a854df5154f2fd7a1746cbe4000f9c8d2e113daa"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/openai.py",
+          "bytes": 14541,
+          "git_blob": "0b51563c2e8773d558d5a07f4a33fbbb5681dea6",
+          "sha256": "9c95f7876235d742dad731df59b775563193b2ba060b431584a151c59f3f086c"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/openai_compatible.py",
+          "bytes": 12944,
+          "git_blob": "46680b6d470f4aecf6901daa819240dbc81a920f",
+          "sha256": "a8a77db7d6fe07f4c2da8a39b1637ad47c6cef8e20ef38efab0fcaf4e8caeb28"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/opencode.py",
+          "bytes": 5541,
+          "git_blob": "6785880a977d04bcfb18bc7cb213f34f2274dfe5",
+          "sha256": "bdb08ade840b3f4400e6919e0a107f313e173242fd7c9092e0f842f40209cfca"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/openrouter.py",
+          "bytes": 495,
+          "git_blob": "8a33b6e8054e7633d27eb3f6bfbac6cb920d66ee",
+          "sha256": "2a601dcd0f46a4713c20786860469bb8074779fa2823454b3d1769dec576ed71"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/pinecone_adaptor.py",
+          "bytes": 18505,
+          "git_blob": "94408bd148ae63f282378224e0ab023432e576c4",
+          "sha256": "fc27a735f2af0aef48c2918a9d3e0cdbbf4b4072c1af16b9220de6dbc225c519"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/qdrant.py",
+          "bytes": 18460,
+          "git_blob": "95729900450fef2a078890248f2d9cf460b8b764",
+          "sha256": "a9efa115dc1a9e0ba0e193b4075bb6289e46255b57e8d4e4c04cf1cb75feb963"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/qwen.py",
+          "bytes": 533,
+          "git_blob": "a7faa262ba4641b068ad7fc972e9449fc2056910",
+          "sha256": "61779e4bc74171f1c512c4532f4d98fc36372b07c640e23a5e24c64a9a621425"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/streaming_adaptor.py",
+          "bytes": 8502,
+          "git_blob": "5a94ab2095a29af067097200607c0ec134f66a92",
+          "sha256": "c26f272f091e52dacb1a4c4cfa03165a13f74bb9c764ba811ca9bec9f3644aa2"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/together.py",
+          "bytes": 524,
+          "git_blob": "3617b48fc9d158e04a7199a3fc50b185f367e6af",
+          "sha256": "44580b3ad5595c77e8a7f5b37a842d76f1f9e7aeea47e5fde1390f6a145b83ac"
+        },
+        {
+          "path": "src/skill_seekers/cli/adaptors/weaviate.py",
+          "bytes": 19937,
+          "git_blob": "27b92c79ea81c373ff34a5a782b2e2df0f5ebb8c",
+          "sha256": "baaa85a5d8471539147671ccf04170844847b0b965d481da98b451802ee056a3"
+        },
+        {
+          "path": "src/skill_seekers/cli/agent_client.py",
+          "bytes": 49879,
+          "git_blob": "3485dcab7bae311c7a45d7968dda50197b1149ee",
+          "sha256": "8ac112ae2739d83654d2395db7b60ef58926fb654351928dd99de1cdcc997185"
+        },
+        {
+          "path": "src/skill_seekers/cli/ai_enhancer.py",
+          "bytes": 13830,
+          "git_blob": "beb28658069d03b157443264828d16234d5bdf45",
+          "sha256": "6bf3bbd4eee11d887ccf9f890dbb6b816d3fa2b9adf2315b2c607718bc35ddc2"
+        },
+        {
+          "path": "src/skill_seekers/cli/api_reference_builder.py",
+          "bytes": 10972,
+          "git_blob": "dd151b47e23bee74a13d46fea9bd8ddb295179fa",
+          "sha256": "3410f7a79781eb1202e2bd9839643e0c6a11cb62ee1d035861fc28801ec0e690"
+        },
+        {
+          "path": "src/skill_seekers/cli/architectural_pattern_detector.py",
+          "bytes": 24830,
+          "git_blob": "2bb41d3c01decee32f1ad707b038f488e25caf4a",
+          "sha256": "e7e04e6e59dea8657f51bd7259505ab58bab74ec4ef84c4adb85bd7b629a5de6"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/__init__.py",
+          "bytes": 1994,
+          "git_blob": "128e22c332b67b7f1933b7565c6e6187f105b861",
+          "sha256": "61a38759a00db21498b89bc1e643db8d877eed4115af90023b2ba316e7dfdb2e"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/analyze.py",
+          "bytes": 5894,
+          "git_blob": "3cbc07fbf320f26b5ea5e9607cb9eabb7479e9ac",
+          "sha256": "b60a6374fa308fb567b419fbfa6e088b922de820df21b3e485b3f1744da4a623"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/common.py",
+          "bytes": 8517,
+          "git_blob": "f25d5ab464a0abe45987144667754bfe6141485f",
+          "sha256": "3d52d715c3b1b783c42190dcef58308005f12443c9e166c1219efef6e79681cd"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/create.py",
+          "bytes": 31307,
+          "git_blob": "aed1aff7c916dfb90c2c7cd9ecc36098aa796896",
+          "sha256": "a307392a0a1e98813d06ea1633d2ca0c88af72759623eca86dc5f5485431d4a2"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/enhance.py",
+          "bytes": 5013,
+          "git_blob": "b5a47a9600c99481bb280fd78a72d4f31899424e",
+          "sha256": "4ad2cd2f38d1699d62f0abf8943a0a1ddb24e7e90d37d4215bce806ce363acef"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/github.py",
+          "bytes": 6182,
+          "git_blob": "73d464e2e0562d941eff6a24eb432645e6968225",
+          "sha256": "900a4ed53fe64cef052f4ede51aee97a94e039e81b8430f067ca1c1bf55af192"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/package.py",
+          "bytes": 6184,
+          "git_blob": "8374dc2c5e460848c338cd36d260ea61d8b7c232",
+          "sha256": "7a1b431a76a6a7294e04d82e01580ad45b8f854766d1153d3d6619da0841cb16"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/pdf.py",
+          "bytes": 2541,
+          "git_blob": "8f2f233aae86a3af4fab74051d18a9facfa985b3",
+          "sha256": "25bdaf4988cd3e70be0419009f1096abc75e24a4a224ef01a717b1f1264dce37"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/scrape.py",
+          "bytes": 6749,
+          "git_blob": "f4376f7a7c04382de2f4bae42e111a3cf26949d2",
+          "sha256": "e2930cb92341328c03b049c1109c6fcc22dacf48ae259e9d0df255b4540cc6fa"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/sync_config.py",
+          "bytes": 1773,
+          "git_blob": "6a67c4d557b6b141ac317eda6526014c20f72ff8",
+          "sha256": "48b065a820105efe9b101522f15a64e14fc7bd84eca164f3790c87df3186dd75"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/unified.py",
+          "bytes": 4014,
+          "git_blob": "ade4a1c760af983803eb8c26ac767c9edff8b97d",
+          "sha256": "ca10aa9d6b833cd06c30381c15c45b8140730bace1eb136b64e586a6bcb6c4ab"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/upload.py",
+          "bytes": 3773,
+          "git_blob": "c5101b959fd1d69835f309182dc2623219f17a5f",
+          "sha256": "23de8eb8e8b83d0633d3012a47a37539494b8f06fd1bf3bc2164081b9c9a3bba"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/word.py",
+          "bytes": 2381,
+          "git_blob": "3bc889a037a4234acd47472ecd964abb2cc3b8b9",
+          "sha256": "407b1f59061134853375d156e73f81d7756feeb439033cfbe18bb0ed62da2f5a"
+        },
+        {
+          "path": "src/skill_seekers/cli/arguments/workflow.py",
+          "bytes": 2437,
+          "git_blob": "d77cc4c27f34fcd95ef48771b1545f933f7f81cc",
+          "sha256": "b28ae368ba6529a4cf0e192b73469a9e2e48bad3a5b2d6c9e0c1b2e6274a76cf"
+        },
+        {
+          "path": "src/skill_seekers/cli/browser_renderer.py",
+          "bytes": 5228,
+          "git_blob": "60620b0f1cafad2eb76b6fc501fa1f20b6b83438",
+          "sha256": "c2ee0a129337e23fd52d291dca514fccb20370605923be7df994416bd8f2770e"
+        },
+        {
+          "path": "src/skill_seekers/cli/code_analyzer.py",
+          "bytes": 92763,
+          "git_blob": "f40c70a0be7664ab3b116c9655e3bd6e402ff630",
+          "sha256": "a963cc01c1db1a8362e2d0beb1c720353b1c5179f7ce3717042dc982162948b2"
+        },
+        {
+          "path": "src/skill_seekers/cli/codebase_scraper.py",
+          "bytes": 83199,
+          "git_blob": "01ee478a3abea3156ec4199d1c580c03f54c586a",
+          "sha256": "2024e189fb1df311ec7ca3a3a2f2b7d579c11af7b67e35ed3d4ee3eeeeaedca6"
+        },
+        {
+          "path": "src/skill_seekers/cli/config_enhancer.py",
+          "bytes": 13230,
+          "git_blob": "cec290acd3824c5032282e9007e87f990c1072d5",
+          "sha256": "d8ee09bca1fca057101554393b9b6266b74b4192d8dba0ab7f846f9d471ea439"
+        },
+        {
+          "path": "src/skill_seekers/cli/config_extractor.py",
+          "bytes": 33669,
+          "git_blob": "1b6b3918a0f7d73e493c3c9f72ce016f369695ba",
+          "sha256": "f3c39495fbff8b09297c8ef9894c3aef14e8c9d753207a08c4a3899e50af77ba"
+        },
+        {
+          "path": "src/skill_seekers/cli/config_fetcher.py",
+          "bytes": 7729,
+          "git_blob": "fc879f7947479b8afe26c9bc7168bcf211a6750e",
+          "sha256": "11668e6caf62609e52bf64ebe92ed81ac9c28b498944f1aa825103b5a97effc4"
+        },
+        {
+          "path": "src/skill_seekers/cli/config_manager.py",
+          "bytes": 22044,
+          "git_blob": "7d061286c142c7c77d01307a8e39bd50e5b9cc8c",
+          "sha256": "383a000287f99d18b2f335566ec767ca9a6750ee4ead529b398f609435338990"
+        },
+        {
+          "path": "src/skill_seekers/cli/config_validator.py",
+          "bytes": 23033,
+          "git_blob": "39b42244febd4687a56a14744c21e28d48f1ea90",
+          "sha256": "f9ffd503dfbf7f3627de9bfc6fd1f24dda4aef620161ebf22b00a173fbd06acd"
+        },
+        {
+          "path": "src/skill_seekers/cli/conflict_detector.py",
+          "bytes": 19487,
+          "git_blob": "a8e92571385793e30c3f8c45fba0cc57d3e83ca1",
+          "sha256": "44fb156a17256965915b667bc744242033effef2f52567bbee0334e5c79a0c04"
+        },
+        {
+          "path": "src/skill_seekers/cli/constants.py",
+          "bytes": 2619,
+          "git_blob": "f7c2e965bb51e3538a1ddb1969d98bb24a3f0729",
+          "sha256": "47e162e78165115cc95bd781fd02969cd182cd9c31f32669feb62b130dee30f6"
+        },
+        {
+          "path": "src/skill_seekers/cli/defaults.json",
+          "bytes": 1638,
+          "git_blob": "1553c911795908e78b239d7e7a5f9978b12cc130",
+          "sha256": "8a8b523a4a905478038122f7088a3105c993fd2cb6bbbb4b9acc5154c67df316"
+        },
+        {
+          "path": "src/skill_seekers/cli/defaults.py",
+          "bytes": 1339,
+          "git_blob": "3d253268b93cbbb0b1b52c8442efae67e3bfc887",
+          "sha256": "977108ad51d0bc2d20fdd37a06741c9120a8d13f2d9b1948998010f95f2cd00e"
+        },
+        {
+          "path": "src/skill_seekers/cli/dependency_analyzer.py",
+          "bytes": 37807,
+          "git_blob": "0916af04a371a6f35d57066cdec3a8d6f5a596d8",
+          "sha256": "da40e2de44c34ff77af513274f441d1dbeea1088f9e1a1992b328bc291c85eb6"
+        },
+        {
+          "path": "src/skill_seekers/cli/doc_scraper.py",
+          "bytes": 104280,
+          "git_blob": "19b67dd09e87428650bdf5a5f9fd414c76904a4e",
+          "sha256": "8ea2a8136a1fbc17fdbc0a128f45e065ddcceb70839f327e5cc4d5014c1520cc"
+        },
+        {
+          "path": "src/skill_seekers/cli/enhance_command.py",
+          "bytes": 10808,
+          "git_blob": "f62031c65e5e6d923f16de3ada597bed4d68b8e6",
+          "sha256": "2475a433784c18f1987ca836456c6e4eab43b24f606fdb2cb4d0ab98272aaa6c"
+        },
+        {
+          "path": "src/skill_seekers/cli/enhance_skill.py",
+          "bytes": 25122,
+          "git_blob": "01383e3a93ece5edea6ba750f10236b1c47c19b2",
+          "sha256": "ec9ad30767bce7db1a6df476a99fd172cff15b80f014e03b299dd36f0483fff9"
+        },
+        {
+          "path": "src/skill_seekers/cli/enhance_skill_local.py",
+          "bytes": 56658,
+          "git_blob": "39e571a5144c07e52346a6a1bd4413aed79a5d94",
+          "sha256": "90d256db13a0c88a83c07dbeea38458df337b885059fe51da9eea1613f198844"
+        },
+        {
+          "path": "src/skill_seekers/cli/enhancement_workflow.py",
+          "bytes": 18502,
+          "git_blob": "54630762f3e69a322af4557640d49a6d807a1474",
+          "sha256": "8e5e917af28bab386be6bcfe47c2c9de68b05253c493607cc3663d86a0c21253"
+        },
+        {
+          "path": "src/skill_seekers/cli/execution_context.py",
+          "bytes": 27721,
+          "git_blob": "4bcc542b776dd6a49dee08a825b46eb3683414b5",
+          "sha256": "ac752e11a1547b5d94def14f22f5ee905ef3d9460c1339ef7ddd7e4930f99c60"
+        },
+        {
+          "path": "src/skill_seekers/cli/exit_codes.py",
+          "bytes": 511,
+          "git_blob": "89e0a36543d64aea4e1fece928fe3dc7d42c3571",
+          "sha256": "f9276dfdf355bf7ab127925df062a23e98b1ad36f5c9b769d09b235dab1b7601"
+        },
+        {
+          "path": "src/skill_seekers/cli/file_discovery.py",
+          "bytes": 1321,
+          "git_blob": "6772aa1377ac601a037681fbbc896d3bc0acbf8b",
+          "sha256": "a50e208dccad8aef1de7b4eb7294cd1728bac9ec693cd93c31dfa624721f41ed"
+        },
+        {
+          "path": "src/skill_seekers/cli/github_fetcher.py",
+          "bytes": 18798,
+          "git_blob": "156f3017991444b8bd9c22ef4cc6c0cd5ed45e17",
+          "sha256": "46c59818fb98565a161a1d0594a163ae4d810feca35d855b34d2e2c7666ce04d"
+        },
+        {
+          "path": "src/skill_seekers/cli/github_scraper.py",
+          "bytes": 60114,
+          "git_blob": "21bd771298c2082404134453f79e9e72ff145664",
+          "sha256": "0f4afb493e77ec7ec766a29cc2b854a42bd7c0b22409cc4e872021bfbcad3334"
+        },
+        {
+          "path": "src/skill_seekers/cli/guide_enhancer.py",
+          "bytes": 19408,
+          "git_blob": "5e39e857fa807aee216aa98fa652d25bba58a105",
+          "sha256": "874fb06827ae69fbb4f20caa547c882075f30dfa0ac9cf132084d098394e6c24"
+        },
+        {
+          "path": "src/skill_seekers/cli/how_to_guide_builder.py",
+          "bytes": 48210,
+          "git_blob": "03391cb5ed2df3449faef2283d93fa189428042b",
+          "sha256": "53cba0567fea858e90850d6157bca13669614de70169392b4ed8cc31e6693a03"
+        },
+        {
+          "path": "src/skill_seekers/cli/html_parsing.py",
+          "bytes": 3643,
+          "git_blob": "029cf7a085f065aa340cd25abf01c1da98900cad",
+          "sha256": "fc787f9f27137b15229ad52238c4ba897eacf78bfbcb322c7153c9ab6bfffbfd"
+        },
+        {
+          "path": "src/skill_seekers/cli/language_detector.py",
+          "bytes": 23844,
+          "git_blob": "e38d9788953ea2fa9c4afa91e625f8c158467968",
+          "sha256": "6e9e88e611c575a31df0f705b5e1ed2f2d67f5d39d655135848f22d20ae5df20"
+        },
+        {
+          "path": "src/skill_seekers/cli/llms_txt_detector.py",
+          "bytes": 1876,
+          "git_blob": "359b4ae9c555820d84f4a1ccb0f99009294e14b0",
+          "sha256": "74fd85e2a53c57f4e00dd1651d55aa0fa9d266f8d434a47e7f99bb0fc9149158"
+        },
+        {
+          "path": "src/skill_seekers/cli/llms_txt_downloader.py",
+          "bytes": 3411,
+          "git_blob": "eaa3acc9b6cfd1a7a4d08832e9e6bb892a127486",
+          "sha256": "5aca9d6399c1360850858c49c9b257e0d1f84ed500ff11044023c34bfc39affe"
+        },
+        {
+          "path": "src/skill_seekers/cli/llms_txt_parser.py",
+          "bytes": 5704,
+          "git_blob": "5d8a93718547d7762f28d5d5ebc83387c88a56e0",
+          "sha256": "e6461bb8d3d547a6007d4ff3e4519a7ba557149e23aa17a9364ae4b7bb764b98"
+        },
+        {
+          "path": "src/skill_seekers/cli/main.py",
+          "bytes": 9268,
+          "git_blob": "884d19188785ee9b2fb08efa720156a64db1c713",
+          "sha256": "31406b4557ef0f614560af0e581b1df1600ee2b67ab1e0e641ab1a4ff6843ab8"
+        },
+        {
+          "path": "src/skill_seekers/cli/merge_sources.py",
+          "bytes": 28717,
+          "git_blob": "0a172e19d591f0bfb82f711bc0b5ec2f9b7d7e38",
+          "sha256": "1fe5f526eaf809929929a862eeef8023c62bc3b46416ff0255ce9727b3df3c90"
+        },
+        {
+          "path": "src/skill_seekers/cli/minimax_config.py",
+          "bytes": 2864,
+          "git_blob": "31ea010ff2a949099becf20529c7ef502a46bec9",
+          "sha256": "b65f42d501787a8d123fefa2e3e52c07b04c70ea6947748667f5ec58cb412379"
+        },
+        {
+          "path": "src/skill_seekers/cli/parallel_batches.py",
+          "bytes": 3935,
+          "git_blob": "2ae1f3bc90dbfcce98d1b4d3cf3602d1783def9d",
+          "sha256": "f890bd37b81e34d02ca98b5eec0d2beb017c16e011f25b196dd6bdf85ab43bc8"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/__init__.py",
+          "bytes": 2276,
+          "git_blob": "341c60226e37cd86e13d3af785935386c76e9383",
+          "sha256": "f3effc625daaa0d6a8433795ce1477ec5c9a5336850b1b4d4c7aafb79158a143"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/base.py",
+          "bytes": 2274,
+          "git_blob": "9e80cbe5fb5b60806640397cd5aaa41acf94c0f9",
+          "sha256": "97bdf7777cb2b0c8b146327072e46223e46ce3fb202301228098e5f38e904380"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/config_parser.py",
+          "bytes": 1038,
+          "git_blob": "ea70c1b4ecc8e0d540664b9e306a94dbcddd5c5e",
+          "sha256": "45a87c12f987cdd679851e231990d5caa0a9b9a816fdfcb2df530ce59bf62e7d"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/create_parser.py",
+          "bytes": 4101,
+          "git_blob": "59f57dc86c401fc19bd4bbb196acddc5ad497f1c",
+          "sha256": "be428329fd419ee507299e11a220c58179a4d61a6dc518356b67e726c20b2e39"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/detect_parser.py",
+          "bytes": 706,
+          "git_blob": "50104c58bea584c633abdec99a42cdb716f996c8",
+          "sha256": "784278ecb661d1936eae6ac941d3a2e3c5b687154caf8c8c4e998db8210e4a15"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/doctor_parser.py",
+          "bytes": 762,
+          "git_blob": "7aefabd7dcebb0b9595fcb0fce184340746c6b5a",
+          "sha256": "424f6a527576e5e82f0f30a8d9690aa336912fdc4c7c349fd0f69ec9274b0475"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/enhance_parser.py",
+          "bytes": 1057,
+          "git_blob": "b04157953be84ff1a9349b67f93b2fe8b34e4a71",
+          "sha256": "98a933f635b0b5e0ef8268798b8588049ce8308eb22ce84ee045b3c811733c51"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/enhance_status_parser.py",
+          "bytes": 902,
+          "git_blob": "229098c356d198c34d79a553c51015c70f5f04bc",
+          "sha256": "c0d57f65890c672af38750635836a344fe5947695a6fb6090843bdd96cba5601"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/estimate_parser.py",
+          "bytes": 1725,
+          "git_blob": "53247d9d8e583606871ed77562ba414de4470a53",
+          "sha256": "591cf68c641636e494f2cdf186b721696cc532860bbbf6098e4c28f60a9bf97b"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/__init__.py",
+          "bytes": 2168,
+          "git_blob": "12a01df07fec308cb94deb3521a7602db9bda6c3",
+          "sha256": "23c95b7a192d10d31e31ac0b57ef39a07577a6c49f8b6070682b2ae70dd2c5b9"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/base_parser.py",
+          "bytes": 11122,
+          "git_blob": "058c71920760e8f8ea5ffafa0b4f14d628d1a0ee",
+          "sha256": "3bb970d7b0e2af6eab5d4382dbc498f2c0bd55fdfa8e9c6c1a3295463206bd10"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/formatters.py",
+          "bytes": 12078,
+          "git_blob": "c39e64ae81429036dd648dea313efc66d1426131",
+          "sha256": "a1adbd64fbbd1b3010bd5fe4bb514e857f7f43d3a13292856758b351a3737ca5"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/markdown_parser.py",
+          "bytes": 23246,
+          "git_blob": "5da840406bcb4b0024587541df512d6a5bf897ae",
+          "sha256": "3c537080e61b61dbcb718427b0b4f3109ed2ecc222a7e30a41a08d98583bbd7f"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/pdf_parser.py",
+          "bytes": 10061,
+          "git_blob": "c185648801882b9ad7005c3898d9cfac73efdd79",
+          "sha256": "4fd98cafd53765d97651c9655b2fd7ed36e900ede0bd4d0bd47258f36aa7d2b2"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/quality_scorer.py",
+          "bytes": 12169,
+          "git_blob": "9602644d488d6efc8bb434260af44ddea13a341f",
+          "sha256": "640a5acdc71fd3a798468c55ee5c91b8d1b8247f5a2b6612d26b12707c44f6f2"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/rst_parser.py",
+          "bytes": 36165,
+          "git_blob": "6ede0c3680ea967ea4f22a880dc850c9aded74da",
+          "sha256": "551f9d61dd024eea905797b8666a673be197fa0e21e311ef05aa94c01da7afc3"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/extractors/unified_structure.py",
+          "bytes": 14225,
+          "git_blob": "c1558ef79358e9ce07afca56bfbd951b791fee81",
+          "sha256": "156d9a92ece91d7fea08b98e9d999cc7c45d955f0b5e28f07a0501e236547b0d"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/install_agent_parser.py",
+          "bytes": 1107,
+          "git_blob": "034cb4bf058ac265aec1e1ba59e2fb6e595414d6",
+          "sha256": "839c661cd92c57b8bec77dd406b0db80983727e9ff0d336c7e0b198ff7fa6d19"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/install_parser.py",
+          "bytes": 1883,
+          "git_blob": "fa3a85d22bb98784c059fd7ea57e268aba12d4c7",
+          "sha256": "3d1a0e7342e571d9978afac00c83b478f9e38ad18bc19a79488120510f88b1e7"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/multilang_parser.py",
+          "bytes": 1311,
+          "git_blob": "3cdcb93c556d19030deed7e4dc3db7263cad3d18",
+          "sha256": "806dae738ff190a8afdb8c79b9ad33aa0004257c4cec345acf029208643b51e7"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/package_parser.py",
+          "bytes": 900,
+          "git_blob": "cb0658d313ba1f6e4f822f2ca321ffc8f6ebab01",
+          "sha256": "af7d43d613afacd521afa4bf15407569514f2de1f8026e00dd21d264c632a0f2"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/quality_parser.py",
+          "bytes": 1782,
+          "git_blob": "f90e2eae4c15796739d01e39e716a79c1140e09c",
+          "sha256": "5c6ffe329648da361db9939b073bca47b44f3d552efc2e4c2cf391da4853609a"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/resume_parser.py",
+          "bytes": 815,
+          "git_blob": "9bb5d07e5eef47a07402eff3fbe78493ed30d035",
+          "sha256": "066f5100dd91089ce3f12820f44837fd520162ad104d9231a5e9da9a0ddee92c"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/scan_parser.py",
+          "bytes": 4008,
+          "git_blob": "2007ed2fa5e7bf3e0e48435058dd8d0ab7c62666",
+          "sha256": "46b5eafdd936be1f435233a33519efc4d30eeba5ae647a7f6195c99a0728f5eb"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/stream_parser.py",
+          "bytes": 1569,
+          "git_blob": "3a962fefb5cbaa089b748820f3743558a0d97810",
+          "sha256": "91014036b7dc5bb7b6aa4bd2e105f1251be496201ebb16a1618bc4898f356770"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/sync_config_parser.py",
+          "bytes": 860,
+          "git_blob": "f4af85ae1774ea1352b3177b8541a078abaf67d2",
+          "sha256": "b02b9d12d814d124856ba0892c4d8be9419d0413c1fed4259fbe2379e11bb319"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/test_examples_parser.py",
+          "bytes": 1661,
+          "git_blob": "0d1c8e6439903f81b3f3b73c2c8d21645476886d",
+          "sha256": "b635a02e635a3fd21398af56c8973f1c2fcd06f8864a866f8e6e40520fc296c8"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/ui_parser.py",
+          "bytes": 978,
+          "git_blob": "46dbcd32b9f7cc5af32405aa4dc421b3fe0bcdda",
+          "sha256": "d6ffa9c43f1c5bf7709b4646764ab8ef215c010baba289ff081566a8103b0de8"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/update_parser.py",
+          "bytes": 1239,
+          "git_blob": "505d496ef9965bb687ed259fb126a36470359ac6",
+          "sha256": "9967bc1e6968ae9c00c65ddda753bb9cb06616e37cb359abe10ffe6f8447a8fa"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/upload_parser.py",
+          "bytes": 890,
+          "git_blob": "fb0a98224073f06e4aca65f6afb0007c22e903aa",
+          "sha256": "c8ce72d077cd6630d8216379b9e21cce07b831160f7340ed1c2832da3560363c"
+        },
+        {
+          "path": "src/skill_seekers/cli/parsers/workflows_parser.py",
+          "bytes": 2486,
+          "git_blob": "bbeeb3fbd7a1fa3737e245401fc9312b6299beb1",
+          "sha256": "8ad315732a1dbb616ccf4f25f83dfd501f4363d61a888fe9318fde9cff932338"
+        },
+        {
+          "path": "src/skill_seekers/cli/pattern_recognizer.py",
+          "bytes": 74319,
+          "git_blob": "ca7a43845e5b71680079af380971656568c7d573",
+          "sha256": "9b58e381e1e12490aa97dbce287c7cb9212db04a5b7cfee095eadb35fb301240"
+        },
+        {
+          "path": "src/skill_seekers/cli/pdf_extractor_poc.py",
+          "bytes": 67516,
+          "git_blob": "5375a088162fcb47ce33f371dde7f4188093e7b5",
+          "sha256": "e639adda61320d2df4589cf9adb9e6b0f8e8e021560df42c6f77bf609291dee2"
+        },
+        {
+          "path": "src/skill_seekers/cli/quality_checker.py",
+          "bytes": 24075,
+          "git_blob": "3ee47834ad19bdf223097cfe08488dd2e273375c",
+          "sha256": "df66285b357f3252c2708784ed9bb6ff7762cc38f6669f2600d3848c15f612dc"
+        },
+        {
+          "path": "src/skill_seekers/cli/rag_chunker.py",
+          "bytes": 13904,
+          "git_blob": "b30605cd5fb6f6b7152a365035628bb3e2d29d62",
+          "sha256": "0e3663aaa001704506d5741815eeebdb9b453004c8cc24041a45c1f2d6a0aec9"
+        },
+        {
+          "path": "src/skill_seekers/cli/rate_limit_handler.py",
+          "bytes": 14246,
+          "git_blob": "d041feaae094e43ca3eb08256b12972cc60936af",
+          "sha256": "bf817a5539ccc031684320ffc68a6800c952b853fdf731e7b495a1edc960fc64"
+        },
+        {
+          "path": "src/skill_seekers/cli/scraper_utils.py",
+          "bytes": 7517,
+          "git_blob": "b0eb0ad00c1a4aaa58113c673232274ee3b1a17c",
+          "sha256": "efa345dc88abecbd2c54b3953049b3f0c4645990ef30fb676d07130e2f6f079f"
+        },
+        {
+          "path": "src/skill_seekers/cli/signal_flow_analyzer.py",
+          "bytes": 18001,
+          "git_blob": "732e7262ab076c613294238ec63a5e54dc2cfcc6",
+          "sha256": "02283286baceda8b53e68358014069f02f4fa60d86da8833d3fceb1af8616c56"
+        },
+        {
+          "path": "src/skill_seekers/cli/skill_converter.py",
+          "bytes": 8988,
+          "git_blob": "37c7302f3eee27fb5ae52e0d6e71264ec81f92f3",
+          "sha256": "7c46113378e6adb9fdcf91d1274eb1045eb536bb4536a7e9cf25d513856d10ec"
+        },
+        {
+          "path": "src/skill_seekers/cli/streaming_ingest.py",
+          "bytes": 15223,
+          "git_blob": "f1cbddd33391ecd290028a8050c63d746d5cc9ec",
+          "sha256": "f3ba337794dcc5cde51bcdf79429534869bf1c79d73cb4957bd478cf5a584f2e"
+        },
+        {
+          "path": "src/skill_seekers/cli/swift_patterns.py",
+          "bytes": 29449,
+          "git_blob": "d9336ddcab94276471225384d5b8aa26edde7898",
+          "sha256": "79a81366b01f9be5ce8a64fa701b83205f4870a33271a3712f44ce27d44765c2"
+        },
+        {
+          "path": "src/skill_seekers/cli/test_example_extractor.py",
+          "bytes": 45656,
+          "git_blob": "ac8ca5e8a3a47fe3dcb9badcca8f29cbfaba5eca",
+          "sha256": "093dac9d3a7a422fd0d8cae9461ce0eff64599dabef2a5608202f88943b8a3df"
+        },
+        {
+          "path": "src/skill_seekers/cli/unified_codebase_analyzer.py",
+          "bytes": 19187,
+          "git_blob": "f56a9dff2443aa3e384a0282b512bc200815acef",
+          "sha256": "d424bd5bcb69424df5d3f8dd2cd2b6416c543f95eb05fe7782ec96a8b10095dc"
+        },
+        {
+          "path": "src/skill_seekers/cli/unified_scraper.py",
+          "bytes": 98288,
+          "git_blob": "db8e252959a08d0d7b304a25564859592d84d55d",
+          "sha256": "558a02fa18a7a3083d940faf1f2bc38b3bfd475619705ac7e1dbcc6815939e55"
+        },
+        {
+          "path": "src/skill_seekers/cli/unified_skill_builder.py",
+          "bytes": 102212,
+          "git_blob": "86a56a7e7ff83efe156fb7a15760f8aec6b2982b",
+          "sha256": "0847ed8a1d91b45a29e7ef7e60825255e08d7e3a5c2efc00332f533c7510b96e"
+        },
+        {
+          "path": "src/skill_seekers/cli/utils.py",
+          "bytes": 19149,
+          "git_blob": "6425603a93de9edc08038dbf066b0305cd1891bf",
+          "sha256": "f85e8fc7f5927c393e1095d9e03109d3323d4d6a9b95fd1a5ea4b8eeb59e1085"
+        },
+        {
+          "path": "src/skill_seekers/cli/video_metadata.py",
+          "bytes": 7745,
+          "git_blob": "06dcacfb2f1f3d36aa1298cafb880ca2776f9f2f",
+          "sha256": "15b63d0040c52d644c937e8ba4b7e69167ccd4540997a508ea52749f844d3b27"
+        },
+        {
+          "path": "src/skill_seekers/cli/video_models.py",
+          "bytes": 28856,
+          "git_blob": "c5e58e7c848f270d6bb33a53a1f0aa8e80d6eb38",
+          "sha256": "caa9313a3fc28dd4e8474f97b11880b8f95c190299f5c3117fa88c4192a24eb3"
+        },
+        {
+          "path": "src/skill_seekers/cli/video_scraper.py",
+          "bytes": 40859,
+          "git_blob": "0d18a10e8635b289866cf59e78e1972d49bbc119",
+          "sha256": "b02f124cfee3310a015eed72ad7c43fa82709ee2c1e4cc7059ebb12a7b78523c"
+        },
+        {
+          "path": "src/skill_seekers/cli/video_segmenter.py",
+          "bytes": 6919,
+          "git_blob": "61ed359f3846ed3f2935a9f97de9df55b89c8e2a",
+          "sha256": "d04fe981f4a9c722f467820c47cae4b964e47083a02157b229706cbfcb311e5d"
+        },
+        {
+          "path": "src/skill_seekers/cli/video_transcript.py",
+          "bytes": 13751,
+          "git_blob": "33292af842627abc32d65e49b370c5a418ab519e",
+          "sha256": "2103237823bf821d20e5a6821741101a7ac9f86248034d6c615d31f2eadf8f72"
+        },
+        {
+          "path": "src/skill_seekers/cli/video_visual.py",
+          "bytes": 86532,
+          "git_blob": "ef2cea9b3deb11c45be87b69f3f5ca5b1409fdb4",
+          "sha256": "a9af590a17240db482e5da702b74fa470be44d6a708804e0c0ec7b483bb95a86"
+        },
+        {
+          "path": "src/skill_seekers/cli/workflow_runner.py",
+          "bytes": 8472,
+          "git_blob": "647165bed273dc9e38d836a8de71b1a8ab565569",
+          "sha256": "f55217abc3e647f6d29174819a40d1c473189dfad108400eb229ef51975cf69a"
+        },
+        {
+          "path": "src/skill_seekers/py.typed",
+          "bytes": 0,
+          "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "src/skill_seekers/services/__init__.py",
+          "bytes": 770,
+          "git_blob": "554ec1314adb038c8cc30fd500aefdf66c885442",
+          "sha256": "0b4e8f4ed9b42d00326f82511c6cfd1909fc45c6c95b3d39c7f5b0f5bc686493"
+        },
+        {
+          "path": "src/skill_seekers/services/path_safety.py",
+          "bytes": 1346,
+          "git_blob": "4765d51e48bf80242cf284d324168046dc709f73",
+          "sha256": "d3a50cf1fba0d557bcb7878c9889cd8e122f1d715b99347a9a136c04f8297886"
+        },
+        {
+          "path": "src/skill_seekers/workflows/__init__.py",
+          "bytes": 52,
+          "git_blob": "3f1ab97045a70b7d6514539d87eec9311f7739ea",
+          "sha256": "47106ee98434381dc3327aed9e18135114de92b51045eddd88217a22b97cf4f8"
+        },
+        {
+          "path": "src/skill_seekers/workflows/accessibility-a11y.yaml",
+          "bytes": 2918,
+          "git_blob": "54ea7d10efc9e86129aa3836448a2db70d2668c7",
+          "sha256": "24b6e7b2b2292b8c12b3f69bdfb264b51e3009050637337c86fb42d019d68d2c"
+        },
+        {
+          "path": "src/skill_seekers/workflows/advanced-patterns.yaml",
+          "bytes": 3086,
+          "git_blob": "3ace0836bfa333528e3657a88fe28587d2831b10",
+          "sha256": "2540468ebe1ada157a0abd0b7f770a5f0c69f4e9e78a49fe165a01e58fbb2711"
+        },
+        {
+          "path": "src/skill_seekers/workflows/ai-assistant-internals.yaml",
+          "bytes": 5010,
+          "git_blob": "d39cd5fad2d84affeb094ffdac73e6b300cc9b05",
+          "sha256": "3114093f956335ab1f7708b8e22f5871cf1f2a4158eb1ed1c969f560481837bd"
+        },
+        {
+          "path": "src/skill_seekers/workflows/api-documentation.yaml",
+          "bytes": 2020,
+          "git_blob": "600c7aa1d021d53aa4dfc69057626a30cad6b51c",
+          "sha256": "528cb329e5aea74ee8840c01ed3ffaec4e4b477638e06733975410979cbaa52a"
+        },
+        {
+          "path": "src/skill_seekers/workflows/api-evolution.yaml",
+          "bytes": 2626,
+          "git_blob": "2d71825a8b0ef38c28c88792abef6bc440f0a2ca",
+          "sha256": "2da2654632ad388eacf1d246f0ba7264fcbe2174f24eb2f5a333ce56e38fc5da"
+        },
+        {
+          "path": "src/skill_seekers/workflows/api-gateway.yaml",
+          "bytes": 5270,
+          "git_blob": "e568e505af6cf59c29d9389cef7dc569d1000eaa",
+          "sha256": "d7d0c6a0ef3a93e8c3d0f0a45f9bf38379184d0d5191292d9e4c39f9820cca01"
+        },
+        {
+          "path": "src/skill_seekers/workflows/architecture-comprehensive.yaml",
+          "bytes": 2323,
+          "git_blob": "f8a74d6af0089a94632a2698b08a4f7e3d49e49d",
+          "sha256": "b622f99dcc32648959abce2e7940aa2db70584ade8db2ece59c8cca5cd3e2b51"
+        },
+        {
+          "path": "src/skill_seekers/workflows/auth-strategies.yaml",
+          "bytes": 2688,
+          "git_blob": "bd638960b53b30934051f51127e8590c588f82f2",
+          "sha256": "a69d55c91462b0ac2a70f8ca7d589a0cbe54500f98ad63db5f7e4d4ee66727ff"
+        },
+        {
+          "path": "src/skill_seekers/workflows/aws-services.yaml",
+          "bytes": 5163,
+          "git_blob": "9fd6e3fc36b389fd5bfb941e9cd1f65dda6f23b4",
+          "sha256": "6c5f8c23713b8d7115abb70bdb4c70a1b2bbc29fc1d5bb864edc4e6ae1f37cff"
+        },
+        {
+          "path": "src/skill_seekers/workflows/background-jobs.yaml",
+          "bytes": 4475,
+          "git_blob": "89279be278d88f8e78d6a4992179b0534d5b23d9",
+          "sha256": "13749a817bcc3654a3cd2c4aa1d6644574c83938025e7ea00ee8c9291fef2c92"
+        },
+        {
+          "path": "src/skill_seekers/workflows/backup-disaster-recovery.yaml",
+          "bytes": 3914,
+          "git_blob": "79cc014083112fb11c8dd9c2a1f1fe826c17c54f",
+          "sha256": "cc11638c79dc26dc9cf2f9429e11db49e858a615bd2741796b9e247d3f7ec1ba"
+        },
+        {
+          "path": "src/skill_seekers/workflows/build-tools.yaml",
+          "bytes": 5167,
+          "git_blob": "80e5cb6a61e2c2f87b7e4b93580d07cdc3b96c77",
+          "sha256": "aa9d80bb7b6bc00568f0f53737a0f59054679a3c41d3904e9ca61abfec7e7a7c"
+        },
+        {
+          "path": "src/skill_seekers/workflows/caching-strategies.yaml",
+          "bytes": 5077,
+          "git_blob": "91390838b79274f1e7b39f5bf2d609dbdfd00d7e",
+          "sha256": "9f96d3f2cd83f9c7e934320097eb288745ca3d0aa06541e4495f22045490fe3c"
+        },
+        {
+          "path": "src/skill_seekers/workflows/cli-tooling.yaml",
+          "bytes": 2444,
+          "git_blob": "dc3d012138cb1aa463d4c78905ce1aa17b1dbe7c",
+          "sha256": "3e7086ee4a214e86ea6f7f9745b454e44e91a93e696ffd39be4c8b72d54f2128"
+        },
+        {
+          "path": "src/skill_seekers/workflows/comparison-matrix.yaml",
+          "bytes": 2770,
+          "git_blob": "d87dabec52ed4425e465bd8b94ac79ff8413c7a9",
+          "sha256": "eb1e332b4f06d4ee23e7ea3f81aeb931d4085eb1531ad19a61595a1e377799c3"
+        },
+        {
+          "path": "src/skill_seekers/workflows/complex-merge.yaml",
+          "bytes": 10013,
+          "git_blob": "1d0c429812a4becaa94a0e80145d3a28f8a2b10b",
+          "sha256": "aa97f21997aabdafd425af60efeea25f43dc0dffe4aa14e78f8754fdd7643b61"
+        },
+        {
+          "path": "src/skill_seekers/workflows/compliance-gdpr.yaml",
+          "bytes": 2616,
+          "git_blob": "f6c3e77a991b14917ad9c8567d7cb1cb3c3118aa",
+          "sha256": "3332a9621dd2b3a8e6f374d7ffe8421248c9fa26cc4ed3a7d145488369718e8b"
+        },
+        {
+          "path": "src/skill_seekers/workflows/component-library.yaml",
+          "bytes": 4841,
+          "git_blob": "10295d5b9fbfeafb80dedb3523246d63ace03755",
+          "sha256": "a4d51c640e8b7973e02cc355437c90f2e361dc58aa06ad255539da7928b80aed"
+        },
+        {
+          "path": "src/skill_seekers/workflows/computer-vision.yaml",
+          "bytes": 3848,
+          "git_blob": "816dc2198d8d66ab4f616cea7d3d3184956d1d63",
+          "sha256": "9d27e3bea78a457f887b07a50eb535b943fcf4698389153e924908d5e0ecbabe"
+        },
+        {
+          "path": "src/skill_seekers/workflows/contribution-guide.yaml",
+          "bytes": 3184,
+          "git_blob": "3d5ab7fa3565ddb8e45703560030a5a2610b3157",
+          "sha256": "668816aa16da898d64245b6d45c4905d0f3ccf54445017ae2ab0dc7c5b012723"
+        },
+        {
+          "path": "src/skill_seekers/workflows/data-validation.yaml",
+          "bytes": 4781,
+          "git_blob": "fa31efb1cf6a378640046bd2ee06c54a01bb1747",
+          "sha256": "46aa4632909796b75e95d8b5b301a9d3924299eafeb7eb5b22583a061f8f80c9"
+        },
+        {
+          "path": "src/skill_seekers/workflows/database-schema.yaml",
+          "bytes": 2633,
+          "git_blob": "178af11625a041fe2343e88c3c0ee5bc41018d07",
+          "sha256": "177f6d236304eeee370b9fc9589f25cbd0a8143c63a1a0e41bbe025520130f32"
+        },
+        {
+          "path": "src/skill_seekers/workflows/deep-linking.yaml",
+          "bytes": 3818,
+          "git_blob": "5744a82a07ac17efdac8abd4912b4c677f8174e7",
+          "sha256": "cb977d4fb3cfd13bca2b4caf8a853aaefdb1190b31f0328076f65749f42340b1"
+        },
+        {
+          "path": "src/skill_seekers/workflows/default.yaml",
+          "bytes": 2545,
+          "git_blob": "efd69bf56dd1d14d144c4be0a4cad1129f799de8",
+          "sha256": "f3f79d48f916755e2dfc3cf363557388f1b72a457adb0d7a49c6934e72c0823a"
+        },
+        {
+          "path": "src/skill_seekers/workflows/design-system.yaml",
+          "bytes": 3774,
+          "git_blob": "ee1a1deb277826120eb78d418c3afd1355d61c4c",
+          "sha256": "c14ff3fb64f13c161133ee6bfd0614cf726e8b7560260cfd42ae6b8fcdbf7a04"
+        },
+        {
+          "path": "src/skill_seekers/workflows/devops-deployment.yaml",
+          "bytes": 3464,
+          "git_blob": "005ff6ad9dcc60dfe4ebf7850941456fbf381c38",
+          "sha256": "fb65b0091ec0e397154176271e07c120d5f0a769f1a414ff0ea83778d11a6962"
+        },
+        {
+          "path": "src/skill_seekers/workflows/encryption-guide.yaml",
+          "bytes": 2587,
+          "git_blob": "fbadc28b6b9943ec04db2e4bb309d21047f3abb0",
+          "sha256": "58fb9b2c8c5fec2843c9ab98cba3a1b886acc0a7ec54d233b0fa4bd3ac8351af"
+        },
+        {
+          "path": "src/skill_seekers/workflows/event-driven.yaml",
+          "bytes": 4985,
+          "git_blob": "b2d54bf73040ef3b39eef4a3e3091db683541693",
+          "sha256": "8344f3091a207aeaa302f5ab6eb6f146e041afb85192e8c2b5c6e4cea6da69d3"
+        },
+        {
+          "path": "src/skill_seekers/workflows/feature-engineering.yaml",
+          "bytes": 2089,
+          "git_blob": "9a483e6815baa54ceaf944fb01991765617745ec",
+          "sha256": "06109a2de7bedb34f6971db60a4f8e9f6457d36206d4f000c56e5e01d53a79b7"
+        },
+        {
+          "path": "src/skill_seekers/workflows/forms-validation.yaml",
+          "bytes": 4844,
+          "git_blob": "de40b519ffd875175d2c2d91f071cdec8ca53cff",
+          "sha256": "e40801203731a7bfc3b7edab39df14085897f39e25ae4b41908ab956afad7768"
+        },
+        {
+          "path": "src/skill_seekers/workflows/graphql-schema.yaml",
+          "bytes": 2618,
+          "git_blob": "194b79bf702d07d916de4bf169d266cbd6eadfaa",
+          "sha256": "fbeb64b59956dd2e07d257f4768e6597ee46cba6df81b55e8623bf09163cbbbe"
+        },
+        {
+          "path": "src/skill_seekers/workflows/grpc-services.yaml",
+          "bytes": 4205,
+          "git_blob": "cfeed75101fc5987b9d79cb8f01579c3be5ab6e4",
+          "sha256": "d850b3c5ad2f3fe008c4aa3fb8b4d7b1b767c0ba69dd18bae1f617791b973b74"
+        },
+        {
+          "path": "src/skill_seekers/workflows/iam-identity.yaml",
+          "bytes": 3939,
+          "git_blob": "714bfd442c4191d5b9e0e6759e07426f0485f1d7",
+          "sha256": "d7af65bef46f16521e833c0febe2dd5e9ffeea52027e3be22ace4c9930ff8720"
+        },
+        {
+          "path": "src/skill_seekers/workflows/kubernetes-deployment.yaml",
+          "bytes": 2583,
+          "git_blob": "42b34fa6ca1f4458001cfdb46c6b3f11452a9a13",
+          "sha256": "fe41bb85a7e8def6a4cb81463563ddbbfe958fb274807a1f992e05854f473e54"
+        },
+        {
+          "path": "src/skill_seekers/workflows/localization-i18n.yaml",
+          "bytes": 4649,
+          "git_blob": "304262fb5fb770b0dbc9f8da5155e0d3550c5c65",
+          "sha256": "f5e8f5cec1e2d6410d7d0e58a0e4995c1540e07a1da9205f2e9da54d2a2739a6"
+        },
+        {
+          "path": "src/skill_seekers/workflows/message-queues.yaml",
+          "bytes": 4906,
+          "git_blob": "df8edaeb34c0d5b391b980d94dd98287cf015a77",
+          "sha256": "834cd83f87d99994eb9bfd38d0e01c84bded5203da23ee48c663c4e6fe69837b"
+        },
+        {
+          "path": "src/skill_seekers/workflows/microservices-patterns.yaml",
+          "bytes": 3415,
+          "git_blob": "a1342538d90fc98f375e7be76cea8fb382ba55e4",
+          "sha256": "7be6b4d37ac890b8eb67cecd280ea0ac830edaaa9e1eb8f6bb7c2c5d38f14237"
+        },
+        {
+          "path": "src/skill_seekers/workflows/migration-guide.yaml",
+          "bytes": 3002,
+          "git_blob": "a8bbc3ffd7ad7d8ec951e2dada2ba5076bf3211e",
+          "sha256": "20bf3ad43a54f22a38a5188308ba230e9e05a41760e9ce3ee737b5d4e21d435e"
+        },
+        {
+          "path": "src/skill_seekers/workflows/minimal.yaml",
+          "bytes": 965,
+          "git_blob": "b4f59198b30500408f6003bdddc5e66962a7632b",
+          "sha256": "582edcaf52c409c0fb98c2ab9075ab271565605268a1c0a5655be421350de81e"
+        },
+        {
+          "path": "src/skill_seekers/workflows/mlops-pipeline.yaml",
+          "bytes": 2631,
+          "git_blob": "f18cbcbdd639505ed0b637bf965708cb5e167363",
+          "sha256": "4af3fba74e6c4696f859c71c843b12e8ea6366508b3d8a6029fc2e290eddbe9f"
+        },
+        {
+          "path": "src/skill_seekers/workflows/model-deployment.yaml",
+          "bytes": 2614,
+          "git_blob": "e464e88e51f2c6d92744609ca08c56e53709fbd9",
+          "sha256": "1814a843badbab186a82f0e4622961caabbd52d06a91a55560a1dd9c96c454ae"
+        },
+        {
+          "path": "src/skill_seekers/workflows/observability-stack.yaml",
+          "bytes": 2644,
+          "git_blob": "cdb3857607bc238423345bf41abc7df644e8056d",
+          "sha256": "66f78e3028a7ab9ade22c048a48af8a1033a5716e421614f24d9ec4e27da90c1"
+        },
+        {
+          "path": "src/skill_seekers/workflows/offline-first.yaml",
+          "bytes": 2555,
+          "git_blob": "9fe7070443b150d10da8b5c55f41841a8fb970d3",
+          "sha256": "ee121a69270a9d8733d47ffbc12c8202f438975926c7b53c9706cd8643391d9f"
+        },
+        {
+          "path": "src/skill_seekers/workflows/onboarding-beginner.yaml",
+          "bytes": 3492,
+          "git_blob": "d9e64a291a074022d859381d5298407a092d2f73",
+          "sha256": "880cf742398d095a2e797d08fb52bd0e469a960bfdbd21cf1e16660a0e066790"
+        },
+        {
+          "path": "src/skill_seekers/workflows/performance-optimization.yaml",
+          "bytes": 3064,
+          "git_blob": "86d40e2170ad77e0ae0a3d00835534eb722776f2",
+          "sha256": "5b29628c8c651a1813598ecabbada0a8beafa6cbef62f6b90d4bd79ae68a0676"
+        },
+        {
+          "path": "src/skill_seekers/workflows/platform-specific.yaml",
+          "bytes": 2006,
+          "git_blob": "0b28d14d8200d4a8020c7c8599ae29f0cffc6f31",
+          "sha256": "917ef92eb140958e27ea871331a61537f1090c177f9b2a8966d45ace87ccd7b6"
+        },
+        {
+          "path": "src/skill_seekers/workflows/prompt-injection-check.yaml",
+          "bytes": 1497,
+          "git_blob": "b97f8b605e1cb7dacd2ff0d2086c52d8cae9b8b9",
+          "sha256": "beaca08019912e62d22e48d3be60c5318140d3fc5bf2fcaa43084a22668e1ff4"
+        },
+        {
+          "path": "src/skill_seekers/workflows/push-notifications.yaml",
+          "bytes": 2583,
+          "git_blob": "6d2d93fed6b184eb1882295a7411a69b8c20a9f1",
+          "sha256": "d9eb22cf5ef064259e982a26775060022e245ed5238deb6d128bca5afde0d34b"
+        },
+        {
+          "path": "src/skill_seekers/workflows/pwa-checklist.yaml",
+          "bytes": 2568,
+          "git_blob": "faadaa0ca901b113086bea77dfe7313ca02245b7",
+          "sha256": "e845210fdb97e6d2cca5d3cab6ccea4a8e7a3dcfe14fb7e0c85772f5e12a2530"
+        },
+        {
+          "path": "src/skill_seekers/workflows/rate-limiting.yaml",
+          "bytes": 2506,
+          "git_blob": "3235089b8828e87448b004ade13d8d35ac0f0ddf",
+          "sha256": "ecdc2c80c43fb62740bb5368b60718f8480f96b5aba46efb7d2bac3a2f4c2562"
+        },
+        {
+          "path": "src/skill_seekers/workflows/responsive-design.yaml",
+          "bytes": 2630,
+          "git_blob": "a6b5fe7ff821e2cc3f194e596f246fcaf4b96078",
+          "sha256": "aae86ed15cbe076ae579bc9be29d27d8e58065c853dbfef7054b9078c8478363"
+        },
+        {
+          "path": "src/skill_seekers/workflows/rest-api-design.yaml",
+          "bytes": 2616,
+          "git_blob": "5ce195d79397ae5f313b26f91bdc4d6656102c5b",
+          "sha256": "441893759162618baf24507ab9d8a0367d97eb1a28ce63e75190e89a550f0b93"
+        },
+        {
+          "path": "src/skill_seekers/workflows/sdk-integration.yaml",
+          "bytes": 3135,
+          "git_blob": "8a03ca56357539381ebf468b56a70e4444e655e2",
+          "sha256": "a7bf25411be945923cd75b907ce7df4141303d47570777aac2a9a02f5b779744"
+        },
+        {
+          "path": "src/skill_seekers/workflows/secrets-management.yaml",
+          "bytes": 2639,
+          "git_blob": "ec5692a83cf5cdf334b2e38dfbb3963e27f41667",
+          "sha256": "4f1b7743f96a4781f64560f94597954c9615b9fb9176ea75160d9682cfd0565b"
+        },
+        {
+          "path": "src/skill_seekers/workflows/security-focus.yaml",
+          "bytes": 2377,
+          "git_blob": "a8d3253b8325664f84f699ecd28ff68ececbb69c",
+          "sha256": "0e84aa34deb06525a90093dbf5dcfffc0b9ab748d277ba75a4cb9dc7f6ea7e0f"
+        },
+        {
+          "path": "src/skill_seekers/workflows/serverless-architecture.yaml",
+          "bytes": 5676,
+          "git_blob": "45629fd8181aa7e4353838d48a606a2b046ba139",
+          "sha256": "366a2f12639295440c7d16b0271062fedb9b2dbab1f6958b6a5ef613b36d7884"
+        },
+        {
+          "path": "src/skill_seekers/workflows/ssr-guide.yaml",
+          "bytes": 2573,
+          "git_blob": "acc038a8ac8a6edf424ff60bab6bc4465def7047",
+          "sha256": "baad5e2b4a29992774efee73b0b265a7e505c356e431962c68fa932251be3e67"
+        },
+        {
+          "path": "src/skill_seekers/workflows/state-management.yaml",
+          "bytes": 2748,
+          "git_blob": "859420dd9e8558e4f4f88e88cafdee840c372826",
+          "sha256": "f8c6f132ed150d1cad249424042852a66bda90f4351079f7cd0d3b1a7a68be73"
+        },
+        {
+          "path": "src/skill_seekers/workflows/stream-processing.yaml",
+          "bytes": 3809,
+          "git_blob": "35e845113030564372ab295f37a9ca4a210b90a1",
+          "sha256": "86e929d47c2cba10ab3f633626928d84975801682d2c9faec8f9bf77bbd96996"
+        },
+        {
+          "path": "src/skill_seekers/workflows/terraform-guide.yaml",
+          "bytes": 2584,
+          "git_blob": "54266f362f0f0d9cb8e47208ee72f52a3cc9d61f",
+          "sha256": "93ebe73f8327795eca106a29fe1add581c177955a5907a0071dbb8d96f5216b3"
+        },
+        {
+          "path": "src/skill_seekers/workflows/testing-focus.yaml",
+          "bytes": 3021,
+          "git_blob": "d3cc3c210327f6b0af93701b304f7778c7d92570",
+          "sha256": "1544d39b4969237fa9cbfd4af0548d67119ba51cec56024234a7c8501df28225"
+        },
+        {
+          "path": "src/skill_seekers/workflows/testing-frontend.yaml",
+          "bytes": 3945,
+          "git_blob": "2c19564d9f4983a60eadb38942fa021a65f396d7",
+          "sha256": "326726e7c1be1783462301800166e106d25ec977aa8984c246d4ca8971afc487"
+        },
+        {
+          "path": "src/skill_seekers/workflows/troubleshooting-guide.yaml",
+          "bytes": 2620,
+          "git_blob": "6269f3d145df9d79cb91f6eddcc97225c9184dc5",
+          "sha256": "414c99eed0a0034e0ec66066862d7b8a56c96edcbdbff3b2a2e9a0331ac93282"
+        },
+        {
+          "path": "src/skill_seekers/workflows/unity-game-dev.yaml",
+          "bytes": 7407,
+          "git_blob": "6e23a6c3ab0ba95816b30e8c67b020120033fc13",
+          "sha256": "fe59471d4a737b63180e5aa22c49e9cc957523f571f28b84337692fc600a4a76"
+        },
+        {
+          "path": "src/skill_seekers/workflows/vector-databases.yaml",
+          "bytes": 3855,
+          "git_blob": "0e298d6ea029ea85eea89f7dbca36491eb6f74fd",
+          "sha256": "1968097c5eb224940f84a009824beb24e53972243c77cf0ee2a657b80f5e7aa0"
+        },
+        {
+          "path": "src/skill_seekers/workflows/video-tutorial.yaml",
+          "bytes": 5073,
+          "git_blob": "d639caa7ed4ec9574ec3a9a04c84fa6427dd92bc",
+          "sha256": "591b4949667c2243f3c984356803bd8bc1c62db552ed4ed7b6182fe48e597c4d"
+        },
+        {
+          "path": "src/skill_seekers/workflows/webhook-guide.yaml",
+          "bytes": 3838,
+          "git_blob": "e8117a51eed139c5f84af59e887f3e1424605ea0",
+          "sha256": "99d3b3bbb2cb235e58c6fa30206cd5d80255ff36cf1445507084652e3a4925a7"
+        },
+        {
+          "path": "src/skill_seekers/workflows/websockets-realtime.yaml",
+          "bytes": 5152,
+          "git_blob": "5ac8e5a4b01c02af009b15bc6c5b738a9aba1cb8",
+          "sha256": "ac05f700d24f05ce903d1a05cbc2831b8dc8c2976cb518d7aa5a7402ef894c5a"
+        },
+        {
+          "path": "tests/test_cli_parsers.py",
+          "bytes": 14390,
+          "git_blob": "5ac80184bfdc81332d4dfee6045b85740ec4c05c",
+          "sha256": "5572ac722fa04f8dc604e624979f13484e9b22220ae7f20227b820c18e238cb6"
+        }
+      ]
+    },
+    {
+      "name": "OpenAI_skills",
+      "repository": "https://github.com/openai/skills.git",
+      "commit": "49f948faa9258a0c61caceaf225e179651397431",
+      "directory": "upstream/OpenAI_skills",
+      "files": [
+        {
+          "path": "README.md",
+          "bytes": 1840,
+          "git_blob": "c205d307226b98189c28cbcce6ff792cbb7b2d05",
+          "sha256": "0f6a07580f3c627253e15a58dd0439e135049ec38eb16cf3587f7e50abc6f590"
+        },
+        {
+          "path": "skills/.system/skill-creator/LICENSE.txt",
+          "bytes": 11358,
+          "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "skills/.system/skill-creator/SKILL.md",
+          "bytes": 18664,
+          "git_blob": "72bc0b97e7a6476254a9d5c424c9971748402ec3",
+          "sha256": "a17383bfb1448637ac1f757ad891ddb9676fa30b0eff620200f0e1cbc0cc0d50"
+        },
+        {
+          "path": "skills/.system/skill-creator/agents/openai.yaml",
+          "bytes": 192,
+          "git_blob": "f5ce09ed118b72908b7308fcfc1619f59e89f6ea",
+          "sha256": "fcc3ba02bdf8d6df1f891637cf5336d2d7ef87bb8910fa622bd150c8e0d4c55b"
+        },
+        {
+          "path": "skills/.system/skill-creator/references/openai_yaml.md",
+          "bytes": 2130,
+          "git_blob": "da5629f8de500ec6f81291d239a2d9c68d1d9044",
+          "sha256": "9fb5928b7f4a746fdb39df503ebbd7a659d5e64b47f85a60626aa1a03fd76b17"
+        },
+        {
+          "path": "skills/.system/skill-creator/scripts/generate_openai_yaml.py",
+          "bytes": 6614,
+          "git_blob": "1a9d784f8704999daf55a2b9036094949d9af3f8",
+          "sha256": "b8f6be33a9d72dd7a8da02e7a9fffea23dc79e94862e6dd6358b57a8899d8f73"
+        },
+        {
+          "path": "skills/.system/skill-creator/scripts/init_skill.py",
+          "bytes": 14483,
+          "git_blob": "f90703eca8159a21a9684ed1df974c702d92f814",
+          "sha256": "bcb8982d3f033a094f2f1be43123ac8537e2562d25d8ba4d8ef2196ae514d96d"
+        },
+        {
+          "path": "skills/.system/skill-creator/scripts/quick_validate.py",
+          "bytes": 3293,
+          "git_blob": "0547b4041a5f58fa19892079a114a1df98286406",
+          "sha256": "6cc9dc3199c935916cf6f73fcbbbb0e3bb1b58c8f5109fefa499978908164f51"
+        }
+      ]
+    }
+  ]
+}

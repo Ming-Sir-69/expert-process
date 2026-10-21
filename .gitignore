@@ -1,0 +1,24 @@
+# Local task records, preferences, and agent configuration
+/AGENTS.md
+/library/
+/runs/
+
+# Upstream checkouts are local reference material; publish provenance only
+/upstream/*
+!/upstream/SOURCES.json
+
+# Generated packages and temporary validation artifacts
+/dist/
+/_trash/
+
+# Local Python and operating-system files
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.DS_Store
+.env
+.env.*
+*.bak
+*.orig
+*~
