@@ -14,6 +14,8 @@ python3 cli/eca.py guide
 
 `guide`默认展示共同核心和轻量用法，只读输出，不创建任务或数据目录。也可以把[Skill入口](skill/expert-process/SKILL.md)交给Agent，按需读取参考方法。
 
+CLI提供本机操作，配置入口命令后可从任意目录调用；Skill文件可由项目规则指向或按宿主机制安装。两种模式并非两个全局Skill，CLI本身也不会自动注册全局Workflow或修改Agent规则。Engram等索引可帮助发现入口，运行时不依赖它。
+
 | 用法 | 何时用 | 怎么用 |
 |---|---|---|
 | 轻量（默认） | 小问题、局部修复、一次性分析，或只缺一种能力 | `guide lite`；可在现有对话或项目中直接完成，不建档 |
@@ -86,8 +88,11 @@ python3 cli/eca.py pack --output-dir /path/to/distribution
 | `cli/` | 记录、检查、查库和导出命令与测试 |
 | `templates/` | 轻量、全量和卡片模板 |
 | `tools/` | 按领域选用的确定性脚本，如颜色指标计算 |
+| [ChatGPT资料](adapters/chatgpt/专家方法.md)与[一句话入口](adapters/chatgpt/入口指令.txt) | 上传至Library的共用能力区域，按当前会话可见范围读取 |
 
-`python3 cli/eca.py pack`生成Skill ZIP和单文件版，只包含通用方法和许可，不包含任务数据、卡片库、CLI、模板或工具脚本。独立Skill使用方法即可，需要CLI自动化时保留完整仓库。手机端专用版本及MCP接入尚未实现，不是本机使用的前提。
+`python3 cli/eca.py pack`生成Skill ZIP和单文件版，只包含通用方法和许可，不包含任务数据、卡片库、CLI、模板或工具脚本。独立Skill使用方法即可，需要CLI自动化时保留完整仓库。
+
+ChatGPT适配为独立的纯文本资料：将`adapters/chatgpt/专家方法.md`上传至Library的共用能力区域；一句话入口可加入现有用户指令。实际读取以当前会话能访问的资料为准。该资料不调用本机CLI，不依赖Engram或MCP；其他手机端适配及MCP接入另行推进。
 
 ## 本地检查
 
